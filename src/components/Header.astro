@@ -1,0 +1,20 @@
+---
+import Navigation from "./Navigation";
+import Logo from "./Logo.astro";
+import { Divider } from 'rsuite';
+---
+
+<header class="w-full bg-gradient-to-br from-slate-50 to-slate-400 border-b-2 border-slate-500 font-sans">
+  <section class="w-1/3 md:w-1/4 lg:w-1/6 mx-auto pt-4">
+    <Logo />
+  </section>
+  <div
+  class="w-3/4 mx-auto"
+  >
+  <Divider />
+  <section class="w-full">
+    <h3 class="text-center font-light font-stretch-125%">Norsk Franklin-register</h2>
+      <Navigation />
+    </section>
+  </div>
+</header>

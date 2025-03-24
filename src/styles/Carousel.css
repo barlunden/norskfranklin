@@ -1,0 +1,34 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .prev { left: 10px; }
+  .next { right: 10px; }
+  

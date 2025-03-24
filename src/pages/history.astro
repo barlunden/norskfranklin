@@ -1,0 +1,13 @@
+---
+import TimelineTest from "../components/TimelineTest";
+import Layout from "../layouts/Layout.astro";
+import { CustomProvider } from "rsuite";
+
+const pageTitle = "Franklins historie"
+---
+<Layout pageTitle={pageTitle}>
+    <CustomProvider>
+        <h1 class="text-center py-4">Franklins historikk</h1>
+        <TimelineTest />
+    </CustomProvider>
+</Layout>
