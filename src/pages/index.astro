@@ -1,11 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { CustomProvider } from "rsuite";
-import HeroImage from '../components/HeroImage.astro';
 import Seksjon from "../components/Seksjon"
 import ImageCarousel from '../components/ImageCarousel';
-import CarCard from '../components/CarCard.astro';
-import CarCard2 from "../components/CarCard2"
+import { Karusell } from '../components/Karusell'
 
 const pageTitle = "Norsk Franklinklubb"
 
@@ -15,7 +13,7 @@ const pageTitle = "Norsk Franklinklubb"
 
 <Layout>
 	<CustomProvider>
-		<ImageCarousel />
+		<Karusell />
 		<Seksjon />
 	</CustomProvider>
 </Layout>
