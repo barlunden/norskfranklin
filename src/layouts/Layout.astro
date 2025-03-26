@@ -1,5 +1,5 @@
 ---
-import Header from "../components/Header.astro";
+import MainPageHeader from "../components/MainPageHeader.astro";
 import Footer from "../components/Footer.astro";
 import '../styles/global.css';
 import 'rsuite/dist/rsuite.min.css';
@@ -17,8 +17,11 @@ const { pageTitle } = Astro.props;
 		<title>{ pageTitle }</title>
 	</head>
 	<body>
-		<Header />
+		<MainPageHeader />
 			<slot />
 		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		  </script>
 	</body>
 </html>

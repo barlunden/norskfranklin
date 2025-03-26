@@ -1,0 +1,52 @@
+---
+import { getImage } from "astro:assets";
+import image from "/src/images/FranklinRondane.jpeg";
+import NavBar from "./NavBar.astro";
+import Hamburger from './Hamburger.astro';
+
+const optimizedImage = await getImage({ src: image });
+---
+
+<section
+  class="relative h-fit md:h-screen bg-cover bg-center bg-no-repeat"
+  style={`background-image: url(${optimizedImage.src});`}
+>
+  <div class="absolute inset-0 backdrop-sepia-60"></div>
+  <!-- Logo og navbar -->
+  <div class="absolute w-full inset-0 bg-transparent bg-opacity-50 flex">
+    <Hamburger />
+    <NavBar />
+  </div>
+  <!-- Sidenavn og undertittel -->
+  <div
+    class="absolute md:inset-y-0 md:left-10 flex flex-col justify-center items-center bg-opacity-50"
+  >
+    <div class="text-left">
+      <h1 class="text-4xl md:text-6xl text-white font-bold">
+        Norsk Franklinregister
+      </h1>
+      <p class="text-lg md:text-2xl text-white">
+        Et møtested for Franklin-entusiaster!
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+    h1 {
+        color: whitesmoke;
+        text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+    }
+    p {
+        color: whitesmoke;
+        text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+    }
+</style>
