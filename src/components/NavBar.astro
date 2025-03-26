@@ -1,5 +1,8 @@
 ---
+import { getImage } from 'astro:assets';
+import logo from '../images/FranklinLogo.png';
 
+const optimizedLogo = await getImage({ src: logo });
 ---
 
 <header class="w-full">
@@ -7,7 +10,7 @@
     <ul class="flex justify-between items-center">
       <div class="">
         <img
-          src="/src/images/FranklinLogo.png"
+          src={optimizedLogo.src}
           alt="Franklin Logo"
           class="w-fit max-h-44"
         />
