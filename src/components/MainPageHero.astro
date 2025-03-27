@@ -1,0 +1,14 @@
+---
+import { getImage } from "astro:assets";
+import image from "/src/images/Franklin9BII.jpeg";
+
+const optimizedImage = await getImage({ src: image });
+---
+<section class="grid grid-cols-1 md:grid-cols-2 w-full h-fit">
+    <div class="w-7/8 mx-auto text-right content-center">
+        <h2>Norsk Franklinregister</h2>
+    </div>
+    <div class="w-7/8 mx-auto">
+        <img src={optimizedImage.src} alt="Franklin 9B" class="rounded-2xl" />
+    </div>
+</section>

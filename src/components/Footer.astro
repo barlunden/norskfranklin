@@ -5,38 +5,25 @@ import image from "/src/images/Franklin1929II.jpg";
 const optimizedImage = await getImage({ src: image });
 ---
 
-<footer
-  class="relative h-fit bg-cover bg-center bg-no-repeat"
-  style={`background-image: url(${optimizedImage.src});`}
->
-  <div class="absolute inset-0 backdrop-grayscale-100"></div>
-  <div class="w-full pl-16 py-10 text-left text-lg text-slate-50">
-    <p class="font-bold">Kontakt:</p>
-    <p>Knut Erik Bjerkeseth</p>
-    <p>Tlf: 905 73 302</p>
-    <p>
-      e-post: <a href="mailto:kebjerkeseth@gmail.com">kebjerkeseth@gmail.com</a>
-    </p>
-  </div>
+<footer class="bg-slate-100">
+  <section class="grid grid-cols-1 md:grid-cols-2 w-full h-fit">
+    <div class="w-full pl-16 py-10 text-left text-lg text-slate-800">
+      <p class="font-bold">Kontakt:</p>
+      <p>Knut Erik Bjerkeseth</p>
+      <p>Tlf: 905 73 302</p>
+      <p>
+        e-post: <a href="mailto:kebjerkeseth@gmail.com"
+          >kebjerkeseth@gmail.com</a
+        >
+      </p>
+    </div>
+    <div>
+      <img src={optimizedImage.src} alt="">
+    </div>
+  </section>
   <div
     class="w-full text-center py-4 text-lg font-bold align-bottom text-slate-900"
   >
     <p>Copyright © 2025 Norsk Franklinregister</p>
   </div>
 </footer>
-<style>
-  footer {
-    background-color: #2e4053;
-  }
-  p {
-    color: whitesmoke;
-    text-shadow: 
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
-  }
-  a {
-    color: whitesmoke;
-  }
-</style>

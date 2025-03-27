@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { CustomProvider } from "rsuite";
 import Seksjon from "../components/Seksjon";
 import { Karusell } from "../components/Karusell";
+import MainPageHero from "../components/MainPageHero.astro";
 
 const pageTitle = "Norsk Franklinklubb";
 
@@ -12,6 +13,7 @@ const pageTitle = "Norsk Franklinklubb";
 
 <Layout>
   <CustomProvider>
+    <MainPageHero />
     <Seksjon />
     <div class="bg-amber-200 content-center text-center p-3 h-64">
       <h2>Her kommer en bildekarusell</h2>

@@ -12,6 +12,7 @@
     "@astrojs/react": "^4.2.1",
     "@coreui/coreui": "^5.2.0",
     "@coreui/react": "^5.5.0",
+    "@fontsource-variable/josefin-sans": "^5.2.5",
     "@fontsource-variable/playfair-display": "^5.2.5",
     "@fontsource/poppins": "^5.2.5",
     "@heroui/react": "^2.7.5",
