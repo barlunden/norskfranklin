@@ -4,11 +4,37 @@ import image from "/src/images/Franklin9BII.jpeg";
 
 const optimizedImage = await getImage({ src: image });
 ---
+
 <section class="grid grid-cols-1 md:grid-cols-2 w-full h-fit">
-    <div class="w-7/8 mx-auto text-right content-center">
-        <h2>Norsk Franklinregister</h2>
-    </div>
-    <div class="w-7/8 mx-auto">
-        <img src={optimizedImage.src} alt="Franklin 9B" class="rounded-2xl" />
-    </div>
+  <div class="w-7/8 mx-auto content-center">
+    <h2>Norsk Franklinregister</h2>
+    <p>
+      Velkommen til Norsk Franklinregister, en nettside dedikert til de unike og
+      innovative bilene fra H.H. Franklin Manufacturing Company.
+    </p>
+    <p>
+      Franklin-bilene, produsert i USA fra 1902 til 1934, var kjent for sin
+      luftkjølte motor og lette konstruksjon. Dette gjorde dem til et særpreget
+      innslag i bilhistorien, og de har i dag en liten, men dedikert gruppe
+      entusiaster i Norge.
+    </p>
+    <p>
+      Denne nettsiden er ment å være et samlingssted for norske
+      Franklin-entusiaster, og inneholder informasjon om:
+    </p>
+    <ul class="text-left list-disc list-inside">
+      <li>Historien til Franklin-bilene</li>
+      <li>Teknisk informasjon og spesifikasjoner</li>
+      <li>Oversikt over kjente Franklin-biler i Norge</li>
+      <li>Arrangementer og treff for Franklin-entusiaster</li>
+      <li>Ressurser og lenker til annen relevant informasjon</li>
+    </ul>
+    <p>
+      Vi håper at Norsk Franklinregister vil være en verdifull ressurs for alle
+      som er interessert i disse fascinerende bilene.
+    </p>
+  </div>
+  <div class="w-7/8 mx-auto">
+    <img src={optimizedImage.src} alt="Franklin 9B" class="rounded-2xl" />
+  </div>
 </section>
