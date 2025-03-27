@@ -1,9 +1,10 @@
 ---
-import Footer from "../components/Footer.astro";
 import '../styles/global.css';
 import 'rsuite/dist/rsuite.min.css';
 import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
 const { pageTitle } = Astro.props;
+import '@fontsource-variable/josefin-sans'
 ---
 
 
@@ -18,7 +19,7 @@ const { pageTitle } = Astro.props;
 	</head>
 	<body>
 		<NavBar />
-			<slot />
+		<slot />
 		<Footer />
 		<script>
 			import "../scripts/menu.js";
@@ -26,7 +27,7 @@ const { pageTitle } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	body {
+	* {
   font-family: 'Josefin Sans Variable', sans-serif;
 }
 </style>

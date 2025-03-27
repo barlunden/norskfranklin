@@ -15,41 +15,37 @@ const pageTitle = "Norsk Franklinklubb";
   <CustomProvider>
     <MainPageHero />
     <Seksjon />
-    <div class="bg-amber-200 content-center text-center p-3 h-64">
-      <h2>Her kommer en bildekarusell</h2>
-    </div>
-    <!-- <Karusell client:load/> -->
-    <div class="grid grid-cols-1 sm:grid-cols-3 text-center h-64">
-      <div class="bg-amber-300 content-center p-3 h-64">
-        <h2>Historisk</h2><p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-          dolorum tempora corrupti voluptatum nesciunt odit ab eaque quo nam
-          autem culpa voluptate totam, veniam itaque ullam incidunt molestiae
-          quaerat eos?
-        </p>
+    <Karusell client:load />
+    <section>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 text-center">
+        <div class="bg-amber-300 content-center p-3 max-h-64">
+          <h2>Historisk</h2><p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            dolorum tempora corrupti voluptatum nesciunt odit ab eaque quo nam
+            autem culpa voluptate totam, veniam itaque ullam incidunt molestiae
+            quaerat eos?
+          </p>
+        </div>
+        <div class="bg-amber-400 content-center p-3 max-h-64">
+          <h2>Teknisk</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem
+            aut laborum assumenda quaerat sint, fugiat ex? Iusto voluptatibus
+            sapiente nostrum iure! Officia odio mollitia consequuntur. Rem animi
+            at iste?
+          </p>
+        </div>
+        <div class="bg-amber-300 content-center p-3 max-h-64">
+          <h2>Treff</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci,
+            temporibus? Quae magni, in eaque quisquam unde iusto, consequuntur
+            harum ipsa pariatur, sit dolore hic voluptatem sint commodi minima
+            fugiat nisi.
+          </p>
+        </div>
       </div>
-      <div class="bg-amber-400 content-center p-3 h-64">
-        <h2>Teknisk</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem
-          aut laborum assumenda quaerat sint, fugiat ex? Iusto voluptatibus
-          sapiente nostrum iure! Officia odio mollitia consequuntur. Rem animi
-          at iste?
-        </p>
-      </div>
-      <div class="bg-amber-300 content-center p-3 h-64">
-        <h2>Treff</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci,
-          temporibus? Quae magni, in eaque quisquam unde iusto, consequuntur
-          harum ipsa pariatur, sit dolore hic voluptatem sint commodi minima
-          fugiat nisi.
-        </p>
-      </div>
-    </div>
-    <div class="text-center content-center text-5xl h-64 bg-amber-200">
-      Nytt fra NVK
-    </div>
-    <!-- <Karusell client:load /> -->
+    </section>
   </CustomProvider>
 </Layout>
