@@ -7,6 +7,8 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   output: "server",
+  site: "https://norskfranklinregister.netlify.app",
+  
   integrations: [react()],
 
   vite: {
