@@ -1,0 +1,26 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import carData from '../../../data/franklins.json'; // Eller '../data/cars.yaml'
+
+const { id } = Astro.params;
+const franklin = carData.find((c) => c.id === Number(id));
+
+if (!franklin) {
+  throw new Error(`Ingen bil funnet med ID ${id}`);
+}
+---
+<Layout>
+  <div class="container w-1/2 bg-slate-50 shadow-2xl mx-auto p-8 mb-10">
+
+    <h1>{franklin.year} {franklin.name}</h1>
+    <p><strong>Eier:</strong> {franklin.owner}</p>
+    <p><strong>Motor:</strong> {franklin.engine.cylinders} sylindrer, {franklin.engine.volume}L</p>
+    <p><strong>Karakteristika:</strong></p>
+    <ul>
+      {franklin.characteristics.map((char) => (
+        <li>{char}</li>
+      ))}
+    </ul>
+    <a href="/franklininnorway">Tilbake til oversikten</a>
+  </div>
+</Layout>

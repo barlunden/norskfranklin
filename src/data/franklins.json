@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "year": 1905,
+    "name": "Franklin Type F",
+    "engine": {
+      "cylinders": 4,
+      "volume": 1.7,
+      "power": 12
+    },
+    "transmission": {
+      "type": "planetgir",
+      "gears": 2
+    },
+    "weight": 920,
+    "characteristics": [],
+    "owner": "Bjørn Skjærvik"
+  },
+  {
+    "id": 2,
+    "year": 1919,
+    "name": "Franklin 9B Roadster",
+    "engine": {
+      "cylinders": 6,
+      "volume": 3.9,
+      "power": 150
+    },
+    "transmission": {
+      "type": "automatic",
+      "gears": 6
+    },
+    "weight": 1500,
+    "characteristics": [],
+    "owner": "Bjørn Skjærvik"
+  },
+  {
+    "id": 3,
+    "year": 1919,
+    "name": "Franklin 9B Touring",
+    "engine": {
+      "cylinders": 6,
+      "volume": 2.0,
+      "power": 150
+    },
+    "transmission": {
+      "type": "automatic",
+      "gears": 6
+    },
+    "weight": 1500,
+    "characteristics": [],
+    "owner": "Egil Hagen"
+  },
+  {
+    "id": 4,
+    "year": 1919,
+    "name": "Franklin 9B Touring",
+    "engine": {
+      "cylinders": 6,
+      "volume": 2.0,
+      "power": 150
+    },
+    "transmission": {
+      "type": "automatic",
+      "gears": 6
+    },
+    "weight": 1500,
+    "characteristics": [],
+    "owner": "Trude Stray Bjerkeseth"
+  }
+]

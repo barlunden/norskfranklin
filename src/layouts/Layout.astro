@@ -1,33 +1,40 @@
 ---
-import '../styles/global.css';
-import 'rsuite/dist/rsuite.min.css';
+import "../styles/global.css";
+import "rsuite/dist/rsuite.min.css";
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 const { pageTitle } = Astro.props;
-import '@fontsource-variable/josefin-sans'
+import "@fontsource-variable/josefin-sans";
 ---
-
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{ pageTitle }</title>
-	</head>
-	<body>
-		<NavBar />
-		<slot />
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		  </script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <NavBar />
+    <slot />
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
 </html>
 <style is:global>
-	* {
-  font-family: 'Josefin Sans Variable', sans-serif;
-}
+  * {
+    font-family: "Josefin Sans Variable", sans-serif;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+
+  .card-link {
+    font-size: 1rem;
+  }
 </style>

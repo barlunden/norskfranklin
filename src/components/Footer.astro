@@ -6,8 +6,8 @@ const optimizedImage = await getImage({ src: image });
 ---
 
 <footer class="bg-slate-100">
-  <section class="grid grid-row md:grid-cols-2 w-full">
-    <div class="w-full pl-4 md:pl-16 md:py-10 pt-5 text-left text-slate-800">
+  <section class="w-full">
+    <div class="w-full my-10 md:py-12 text-center text-slate-900">
       <p class="font-bold">Kontakt:</p>
       <p>Knut Erik Bjerkeseth</p>
       <p>Tlf: 905 73 302</p>
@@ -17,19 +17,8 @@ const optimizedImage = await getImage({ src: image });
         >
       </p>
     </div>
-    <div class="hidden md:inline-grid">
-      <img src={optimizedImage.src} alt="" class="f-image rounded-bl-2xl" />
-    </div>
   </section>
   <div class="w-full text-center py-4 font-bold align-bottom text-slate-900">
     <h4>Copyright © 2025 Norsk Franklinregister</h4>
   </div>
 </footer>
-<style>
-  .f-image {
-    box-shadow:
-      rgba(0, 0, 0, 0.4) 0px 2px 4px,
-      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  }
-</style>

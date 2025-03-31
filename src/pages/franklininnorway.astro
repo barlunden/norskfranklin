@@ -1,10 +1,24 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
+import franklins from "../data/franklins.json";
 
-const pageTitle = "Biler i norge"
+const pageTitle = "Biler i norge";
 ---
 
 <Layout pageTitle={pageTitle}>
+  <div class="container w-1/2 bg-slate-50 shadow-2xl mx-auto p-8 mb-10">
     <h1>Biler i Norge</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum et aliquid porro sit ullam nesciunt velit ad neque atque, fuga voluptatum veniam veritatis placeat ipsam similique officiis sapiente ducimus ab.</p>
+    <p>Denne siden er under utvikling. Flere biler blir synlige etter hvert.</p>
+    <ul>
+      {
+        franklins.map((franklin) => (
+          <li>
+            <a href={`/cars/${franklin.id}`} class="card-link">
+              {franklin.year} {franklin.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </Layout>
