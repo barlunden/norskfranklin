@@ -9,7 +9,7 @@ if (!franklin) {
   throw new Error(`Ingen bil funnet med ID ${id}`);
 }
 
-const hasImage = franklin.imageUrl !== undefined;
+const hasImage = franklin.imageUrl && franklin.imageUrl.length > 0;
 const hasCharacteristicData = franklin.characteristics && franklin.characteristics.length > 0;
 ---
 <Layout>
@@ -18,10 +18,10 @@ const hasCharacteristicData = franklin.characteristics && franklin.characteristi
       <img
         src={franklin.imageUrl}
         alt={`Bilde av ${franklin.name}`}
-        class="w-full h-auto mb-4"
+        class="w-full h-auto mb-4 border-1 border-sky-800 shadow-lg"
       />
     ) : null}
-    <h1>{franklin.year} {franklin.name}</h1>
+    <h2>{franklin.year} {franklin.name}</h2>
     <p><strong>Eier:</strong> {franklin.owner}</p>
     <p><i>Denne seksjonen vil bli utvidet og oppdatert når alle kjente Frankliner i Norge er lagt inn i systemet.</i></p>
     <p><strong>Motor:</strong> {franklin.engine.cylinders} sylindrer, {franklin.engine.volume}L</p>
