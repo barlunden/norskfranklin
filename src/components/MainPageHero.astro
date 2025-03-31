@@ -6,14 +6,14 @@ const optimizedImage = await getImage({ src: image });
 ---
 
 <section class="grid grid-rows-1 lg:grid-cols-2 w-full h-fit mb-4">
-  <div class="w-full p-10">
+  <div class="w-9/10 p-4">
     <img
       src={optimizedImage.src}
       alt="Franklin 9B"
-      class="rounded-2xl mx-auto h-image"
+      class="mx-auto image-shadow"
     />
   </div>
-  <div class="w-full px-20 mx-auto content-center lg:order-first shadow-2xl">
+  <div class="w-9/10 px-4 mx-auto content-center lg:order-first shadow-effect bg-yellow-50/70">
     <h2>Norsk Franklinregister</h2>
     <p>
       Velkommen til Norsk Franklinregister, en nettside dedikert til de unike og
@@ -27,26 +27,8 @@ const optimizedImage = await getImage({ src: image });
     </p>
     <p>
       Denne nettsiden er ment å være et samlingssted for norske
-      Franklin-entusiaster, og inneholder informasjon om:
-    </p>
-    <ul class="text-left list-disc list-inside">
-      <li>Historien til Franklin-bilene</li>
-      <li>Teknisk informasjon og spesifikasjoner</li>
-      <li>Oversikt over kjente Franklin-biler i Norge</li>
-      <li>Arrangementer og treff for Franklin-entusiaster</li>
-      <li>Ressurser og lenker til annen relevant informasjon</li>
-    </ul>
-    <p>
-      Vi håper at Norsk Franklinregister vil være en verdifull ressurs for alle
-      som er interessert i disse fascinerende bilene.
+      Franklin-entusiaster, og vil inneholde informasjon til nytte og glede for
+      både eiere og interesserte.
     </p>
   </div>
 </section>
-<style>
-  .h-image {
-    box-shadow:
-      rgba(0, 0, 0, 0.4) 0px 2px 4px,
-      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  }
-</style>
