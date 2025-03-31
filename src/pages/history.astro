@@ -1,13 +1,29 @@
 ---
-import TimelineTest from "../components/TimelineTest";
+import FranklinTimeline from "../components/Timeline";
 import Layout from "../layouts/Layout.astro";
 import { CustomProvider } from "rsuite";
 
-const pageTitle = "Franklins historie"
+const pageTitle = "Franklins historie";
 ---
+
 <Layout pageTitle={pageTitle}>
-    <CustomProvider>
-        <h1 class="text-center py-4">Franklins historikk</h1>
-        <TimelineTest />
-    </CustomProvider>
+  <CustomProvider>
+    <div class="container w-1/2 bg-slate-50 shadow-2xl mx-auto p-8 mb-10">
+      <h1 class="text-center py-4">Franklins historikk</h1>
+      <p>
+        Franklin Automobile Company var en amerikansk bilprodusent som opererte
+        fra 1902 til 1934 med hovedkontor i Syracuse, New York. Selskapet,
+        grunnlagt av Herbert H. Franklin, var kjent for sine innovative
+        luftkjølte motorer og lette konstruksjoner som skilte seg ut blant
+        luksusbiler på den tiden. Franklin introduserte flere teknologiske
+        nyvinninger, inkludert seks-sylindrede motorer og automatisk tenning.
+      </p>
+      <p>
+        Tidslinjen gir et innblikk i selskapets utvikling, fra tidlige suksesser
+        til utfordringene under den økonomiske depresjonen som førte til konkurs
+        i 1934.
+      </p>
+    </div>
+    <FranklinTimeline />
+  </CustomProvider>
 </Layout>

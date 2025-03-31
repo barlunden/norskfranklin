@@ -5,7 +5,7 @@ import image from "/src/images/Franklin9BII.jpeg";
 const optimizedImage = await getImage({ src: image });
 ---
 
-<section class="grid grid-rows-1 lg:grid-cols-2 w-full h-fit">
+<section class="grid grid-rows-1 lg:grid-cols-2 w-full h-fit mb-4">
   <div class="w-full p-10">
     <img
       src={optimizedImage.src}
@@ -13,7 +13,7 @@ const optimizedImage = await getImage({ src: image });
       class="rounded-2xl mx-auto h-image"
     />
   </div>
-  <div class="w-full px-20 mx-auto content-center lg:order-first">
+  <div class="w-full px-20 mx-auto content-center lg:order-first shadow-2xl">
     <h2>Norsk Franklinregister</h2>
     <p>
       Velkommen til Norsk Franklinregister, en nettside dedikert til de unike og
