@@ -8,20 +8,30 @@ const franklin = carData.find((c) => c.id === Number(id));
 if (!franklin) {
   throw new Error(`Ingen bil funnet med ID ${id}`);
 }
+
+const hasImage = franklin.imageUrl !== undefined;
+const hasCharacteristicData = franklin.characteristics && franklin.characteristics.length > 0;
 ---
 <Layout>
   <div class="container w-1/2 bg-slate-50 shadow-2xl mx-auto p-8 mb-10">
-
+    {hasImage ? (
+      <img
+        src={franklin.imageUrl}
+        alt={`Bilde av ${franklin.name}`}
+        class="w-full h-auto mb-4"
+      />
+    ) : null}
     <h1>{franklin.year} {franklin.name}</h1>
     <p><strong>Eier:</strong> {franklin.owner}</p>
     <p><i>Denne seksjonen vil bli utvidet og oppdatert når alle kjente Frankliner i Norge er lagt inn i systemet.</i></p>
     <p><strong>Motor:</strong> {franklin.engine.cylinders} sylindrer, {franklin.engine.volume}L</p>
-    <p><strong>Karakteristika:</strong></p>
-    <ul>
+    {hasCharacteristicData ? (
+      <p><strong>Karakteristika:</strong></p>
+      <ul>
       {franklin.characteristics.map((char) => (
         <li>{char}</li>
       ))}
-    </ul>
+    </ul>) : null}
     <a href="/franklininnorway">Tilbake til oversikten</a>
   </div>
 </Layout>
