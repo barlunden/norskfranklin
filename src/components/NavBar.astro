@@ -9,11 +9,11 @@ const optimizedLogo = await getImage({ src: logo });
   <nav class="nav-links w-full bg-transparent text-slate-950 py-8 px-10 z-99">
     <ul class="flex flex-col md:flex-row justify-between items-center">
       <div>
-        <img
+        <a href="/"><img
           src={optimizedLogo.src}
           alt="H. H. Franklin Cars Logo"
           class="max-h-40"
-        />
+        /></a>
       </div>
       <div
         class="flex space-x-8 text-lg lg:text-2xl font-semibold content-center"
@@ -26,23 +26,3 @@ const optimizedLogo = await getImage({ src: logo });
     </ul>
   </nav>
 </header>
-<style is:global>
-  a {
-    color: #2e4053;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  a:hover {
-    color: #1a1d23;
-    text-decoration: underline;
-  }
-
-  a:active {
-    color: #0a0a0a;
-  }
-
-  a:visited {
-    color: #343a40;
-  }
-</style>

@@ -9,8 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/netlify": "^6.2.4",
-    "@astrojs/react": "^4.2.1",
+    "@astrojs/netlify": "^6.2.5",
+    "@astrojs/react": "^4.2.3",
     "@coreui/coreui": "^5.2.0",
     "@coreui/react": "^5.5.0",
     "@fontsource-variable/josefin-sans": "^5.2.5",
@@ -22,13 +22,13 @@
     "@types/react": "^19.0.11",
     "@types/react-dom": "^19.0.4",
     "antd": "^5.24.5",
-    "astro": "^5.5.4",
-    "astro-imagetools": "^0.9.0",
+    "astro": "^5.6.1",
+    "astro-imagetools": "^0.2.7",
     "framer-motion": "^12.6.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-image-gallery": "^1.4.0",
     "rsuite": "^5.78.1",
-    "tailwindcss": "^4.0.14"
+    "tailwindcss": "^4.1.3"
   }
 }

@@ -13,18 +13,46 @@ const hasImage = franklin.imageUrl && franklin.imageUrl.length > 0;
 const hasCharacteristicData = franklin.characteristics && franklin.characteristics.length > 0;
 ---
 <Layout>
-  <div class="container w-1/2 shadow-effect mx-auto p-8 mb-10">
+  <div class="container w-1/2 shadow-effect mx-auto p-(--card-padding) mb-10 rounded-(--card-radius) [--card-padding:--spacing(4)] [--card-radius:var(--radius-4xl)]">
     {hasImage ? (
       <img
         src={franklin.imageUrl}
         alt={`Bilde av ${franklin.name}`}
-        class="w-full h-auto mb-4 border-1 border-sky-800 image-shadow"
+        class="w-full h-auto mb-4 border-1 border-sky-800 image-shadow rounded-[calc(var(--card-radius)-var(--card-padding))]"
       />
     ) : null}
-    <h2>{franklin.year} {franklin.name}</h2>
+    <h2 class="tracking-tight">{franklin.year} {franklin.name}</h2>
     <p><strong>Eier:</strong> {franklin.owner}</p>
     <p><i>Denne seksjonen vil bli utvidet og oppdatert når alle kjente Frankliner i Norge er lagt inn i systemet.</i></p>
-    <p><strong>Motor:</strong> {franklin.engine.cylinders} sylindrer, {franklin.engine.volume}L</p>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+
+        <p><strong>Motor:</strong></p>
+        <ul class="list-disc list-inside">
+          <li>
+            {franklin.engine.cylinders} sylindrer
+          </li>
+          <li>
+            Volum: {franklin.engine.volume}L
+          </li>
+          <li>
+            {franklin.engine.power} hk
+          </li>
+        </ul>
+      </div>
+      <div>
+
+        <p><strong>Girkasse:</strong></p>
+        <ul class="list-disc list-inside">
+          <li>
+            Type: {franklin.transmission.type}
+          </li>
+          <li>
+            Antall gir: {franklin.transmission.gears}
+          </li>
+        </ul>
+      </div>
+    </div>
     {hasCharacteristicData ? (
       <p><strong>Karakteristika:</strong></p>
       <ul>

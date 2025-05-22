@@ -4,9 +4,8 @@ import image from "/src/images/Franklin9BII.jpeg";
 
 const optimizedImage = await getImage({ src: image });
 ---
-
 <section class="grid grid-rows-1 lg:grid-cols-2 w-full h-fit mb-4">
-  <div class="w-9/10 p-4">
+  <div class="w-9/10">
     <img
       src={optimizedImage.src}
       alt="Franklin 9B"
@@ -14,7 +13,7 @@ const optimizedImage = await getImage({ src: image });
     />
   </div>
   <div class="w-9/10 px-4 mx-auto content-center lg:order-first shadow-effect bg-yellow-50/70">
-    <h2>Norsk Franklinregister</h2>
+    <h2 class="tracking-tight">Norsk Franklinregister</h2>
     <p>
       Velkommen til Norsk Franklinregister, en nettside dedikert til de unike og
       innovative bilene fra H.H. Franklin Manufacturing Company.

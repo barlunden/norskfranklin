@@ -23,12 +23,12 @@
     "name": "Franklin 9B Roadster",
     "engine": {
       "cylinders": 6,
-      "volume": 3.9,
-      "power": 150
+      "volume": 3.3,
+      "power": 20
     },
     "transmission": {
-      "type": "automatic",
-      "gears": 6
+      "type": "planetgir",
+      "gears": 3
     },
     "weight": 1500,
     "characteristics": [],
@@ -41,12 +41,12 @@
     "name": "Franklin 9B Touring",
     "engine": {
       "cylinders": 6,
-      "volume": 2.0,
-      "power": 150
+      "volume": 3.3,
+      "power": 20
     },
     "transmission": {
-      "type": "automatic",
-      "gears": 6
+      "type": "planetgir",
+      "gears": 3
     },
     "weight": 1500,
     "characteristics": [],
@@ -59,12 +59,12 @@
     "name": "Franklin 9B Touring",
     "engine": {
       "cylinders": 6,
-      "volume": 2.0,
-      "power": 150
+      "volume": 3.3,
+      "power": 20
     },
     "transmission": {
-      "type": "automatic",
-      "gears": 6
+      "type": "planetgir",
+      "gears": 3
     },
     "weight": 1500,
     "characteristics": [],
@@ -77,12 +77,12 @@
     "name": "Franklin 9B Sedan 2-Door",
     "engine": {
       "cylinders": 6,
-      "volume": 2.0,
-      "power": 150
+      "volume": 3.3,
+      "power": 20
     },
     "transmission": {
-      "type": "automatic",
-      "gears": 6
+      "type": "planetgir",
+      "gears": 3
     },
     "weight": 1500,
     "characteristics": [],

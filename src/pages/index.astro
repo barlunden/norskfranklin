@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { CustomProvider } from "rsuite";
-import Seksjon from "../components/Seksjon";
 import { Karusell } from "../components/Karusell";
 import MainPageHero from "../components/MainPageHero.astro";
 
@@ -11,41 +10,9 @@ const pageTitle = "Norsk Franklinklubb";
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
+<Layout pageTitle={pageTitle}>
   <CustomProvider>
     <MainPageHero />
-    <Seksjon />
     <Karusell client:load />
-    <section>
-
-      <div class="grid grid-cols-1 sm:grid-cols-3 text-center">
-        <div class="bg-amber-300 content-center p-3 max-h-64">
-          <h2>Historisk</h2><p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-            dolorum tempora corrupti voluptatum nesciunt odit ab eaque quo nam
-            autem culpa voluptate totam, veniam itaque ullam incidunt molestiae
-            quaerat eos?
-          </p>
-        </div>
-        <div class="bg-amber-400 content-center p-3 max-h-64">
-          <h2>Teknisk</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem
-            aut laborum assumenda quaerat sint, fugiat ex? Iusto voluptatibus
-            sapiente nostrum iure! Officia odio mollitia consequuntur. Rem animi
-            at iste?
-          </p>
-        </div>
-        <div class="bg-amber-300 content-center p-3 max-h-64">
-          <h2>Treff</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci,
-            temporibus? Quae magni, in eaque quisquam unde iusto, consequuntur
-            harum ipsa pariatur, sit dolore hic voluptatem sint commodi minima
-            fugiat nisi.
-          </p>
-        </div>
-      </div>
-    </section>
   </CustomProvider>
 </Layout>
