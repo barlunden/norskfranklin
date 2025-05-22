@@ -3,26 +3,65 @@ import { getImage } from 'astro:assets';
 import logo from '../images/FranklinLogo.png';
 
 const optimizedLogo = await getImage({ src: logo });
+const { pathname } = Astro.url;
 ---
 
 <header class="w-full">
-  <nav class="nav-links w-full bg-transparent text-slate-950 py-8 px-10 z-99">
-    <ul class="flex flex-col md:flex-row justify-between items-center">
-      <div>
-        <a href="/"><img
+  <nav class="w-full bg-transparent text-slate-950 py-8 px-10 z-50">
+    <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
+      <a href="/" class="mb-4 md:mb-0">
+        <img
           src={optimizedLogo.src}
           alt="H. H. Franklin Cars Logo"
           class="max-h-40"
-        /></a>
-      </div>
-      <div
-        class="flex space-x-8 text-lg lg:text-2xl font-semibold content-center"
-      >
-        <li><a href="/">Hjem</a></li>
-        <li><a href="/history">Historikk</a></li>
-        <li><a href="/franklininnorway">Biler i Norge</a></li>
-        <li><a href="/kontakt">Kontakt</a></li>
-      </div>
-    </ul>
+        />
+      </a>
+      <ul class="flex space-x-8 text-lg lg:text-2xl font-semibold items-center">
+        <li>
+          <a
+            href="/"
+            class={pathname === "/" 
+              ? "underline underline-offset-8 decoration-2 text-blue-700"
+              : "hover:underline underline-offset-8 decoration-2 transition-colors"}
+            aria-current={pathname === "/" ? "page" : undefined}
+          >
+            Hjem
+          </a>
+        </li>
+        <li>
+          <a
+            href="/history"
+            class={pathname === "/history"
+              ? "underline underline-offset-8 decoration-2 text-blue-700"
+              : "hover:underline underline-offset-8 decoration-2 transition-colors"}
+            aria-current={pathname === "/history" ? "page" : undefined}
+          >
+            Historikk
+          </a>
+        </li>
+        <li>
+          <a
+            href="/franklininnorway"
+            class={pathname === "/franklininnorway"
+              ? "underline underline-offset-8 decoration-2 text-blue-700"
+              : "hover:underline underline-offset-8 decoration-2 transition-colors"}
+            aria-current={pathname === "/franklininnorway" ? "page" : undefined}
+          >
+            Biler i Norge
+          </a>
+        </li>
+        <li>
+          <a
+            href="/kontakt"
+            class={pathname === "/kontakt"
+              ? "underline underline-offset-8 decoration-2 text-blue-700"
+              : "hover:underline underline-offset-8 decoration-2 transition-colors"}
+            aria-current={pathname === "/kontakt" ? "page" : undefined}
+          >
+            Kontakt
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
