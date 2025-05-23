@@ -4,7 +4,7 @@ import '@coreui/coreui/dist/css/coreui.min.css'
 
 export const Karusell = () => {
   return (
-    <CCarousel controls indicators className='mx-24 my-12 border-1 hidden md:block'>
+    <CCarousel controls indicators className="my-12 border-1 hidden md:block mx-auto max-w-3xl">
       <CCarouselItem>
         <CImage className="d-block w-100" src="/images/Franklin1929I.jpg" alt="1929 Franklin" />
         <CCarouselCaption className="backdrop-blur-md border-1 border-slate-400 rounded-lg">

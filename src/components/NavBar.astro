@@ -6,23 +6,21 @@ const optimizedLogo = await getImage({ src: logo });
 const { pathname } = Astro.url;
 ---
 
-<header class="w-full">
-  <nav class="w-full bg-transparent text-slate-950 py-8 px-10 z-50">
-    <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
-      <a href="/" class="mb-4 md:mb-0">
+<header class="navbar-header">
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="logo-link">
         <img
           src={optimizedLogo.src}
           alt="H. H. Franklin Cars Logo"
-          class="max-h-40"
+          class="logo-img"
         />
       </a>
-      <ul class="flex space-x-8 text-lg lg:text-2xl font-semibold items-center">
+      <ul class="nav-list">
         <li>
           <a
             href="/"
-            class={pathname === "/" 
-              ? "underline underline-offset-8 decoration-2 text-blue-700"
-              : "hover:underline underline-offset-8 decoration-2 transition-colors"}
+            class={pathname === "/" ? "nav-link active" : "nav-link"}
             aria-current={pathname === "/" ? "page" : undefined}
           >
             Hjem
@@ -31,9 +29,7 @@ const { pathname } = Astro.url;
         <li>
           <a
             href="/history"
-            class={pathname === "/history"
-              ? "underline underline-offset-8 decoration-2 text-blue-700"
-              : "hover:underline underline-offset-8 decoration-2 transition-colors"}
+            class={pathname === "/history" ? "nav-link active" : "nav-link"}
             aria-current={pathname === "/history" ? "page" : undefined}
           >
             Historikk
@@ -42,9 +38,7 @@ const { pathname } = Astro.url;
         <li>
           <a
             href="/franklininnorway"
-            class={pathname === "/franklininnorway"
-              ? "underline underline-offset-8 decoration-2 text-blue-700"
-              : "hover:underline underline-offset-8 decoration-2 transition-colors"}
+            class={pathname === "/franklininnorway" ? "nav-link active" : "nav-link"}
             aria-current={pathname === "/franklininnorway" ? "page" : undefined}
           >
             Biler i Norge
@@ -52,10 +46,17 @@ const { pathname } = Astro.url;
         </li>
         <li>
           <a
+            href="/klubber"
+            class={pathname === "/klubber" ? "nav-link active" : "nav-link"}
+            aria-current={pathname === "/klubber" ? "page" : undefined}
+          >
+            Andre klubber
+          </a>
+        </li>
+        <li>
+          <a
             href="/kontakt"
-            class={pathname === "/kontakt"
-              ? "underline underline-offset-8 decoration-2 text-blue-700"
-              : "hover:underline underline-offset-8 decoration-2 transition-colors"}
+            class={pathname === "/kontakt" ? "nav-link active" : "nav-link"}
             aria-current={pathname === "/kontakt" ? "page" : undefined}
           >
             Kontakt
@@ -65,3 +66,64 @@ const { pathname } = Astro.url;
     </div>
   </nav>
 </header>
+
+<style>
+.navbar-header {
+  width: 100%;
+}
+.navbar {
+  width: 100%;
+  background: transparent;
+  color: #0f172a;
+  padding: 2rem 2.5rem;
+  z-index: 50;
+}
+.navbar-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-link {
+  margin-bottom: 1rem;
+}
+.logo-img {
+  max-height: 10rem;
+  display: block;
+}
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-link {
+  color: #0f172a;
+  text-decoration: none;
+  padding-bottom: 0.15em;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+.nav-link:hover {
+  border-bottom: 2px solid #94a3b8; /* lys blågrå på hover */
+}
+.nav-link.active,
+.nav-link[aria-current="page"] {
+  border-bottom: 2px solid #2563eb; /* blå underline for aktiv */
+  color: #2563eb;
+}
+@media (min-width: 768px) {
+  .navbar-inner {
+    flex-direction: row;
+  }
+  .logo-link {
+    margin-bottom: 0;
+  }
+}
+</style>
