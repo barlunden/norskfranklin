@@ -4,21 +4,21 @@ import image from "/src/images/Franklin9BII.jpeg";
 
 const optimizedImage = await getImage({ src: image });
 ---
-<section class="grid grid-rows-1 lg:grid-cols-2 w-full h-fit mb-4">
-  <div class="w-9/10">
+<section class="w-full max-w-7xl mx-auto p-4 grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-8">
+  <div class="hero-image-container order-2 lg:order-2 flex justify-center items-center">
     <img
       src={optimizedImage.src}
       alt="Franklin 9B"
-      class="mx-auto image-shadow"
+      class="max-w-full h-auto rounded-lg image-shadow"
     />
   </div>
-  <div class="w-9/10 px-4 mx-auto content-center lg:order-first shadow-effect bg-yellow-50/70">
-    <h2 class="tracking-tight">Norsk Franklinregister</h2>
-    <p>
+  <div class="hero-container order-1 lg:order-1 bg-yellow-50/70 p-6 rounded-lg shadow-effect flex flex-col justify-center">
+    <h2 class="text-3xl font-bold tracking-tight mb-4">Norsk Franklinregister</h2>
+    <p class="mb-3">
       Velkommen til Norsk Franklinregister, en nettside dedikert til de unike og
       innovative bilene fra H.H. Franklin Manufacturing Company.
     </p>
-    <p>
+    <p class="mb-3">
       Franklin-bilene, produsert i USA fra 1902 til 1934, var kjent for sin
       luftkjølte motor og lette konstruksjon. Dette gjorde dem til et særpreget
       innslag i bilhistorien, og de har i dag en liten, men dedikert gruppe
@@ -31,3 +31,9 @@ const optimizedImage = await getImage({ src: image });
     </p>
   </div>
 </section>
+
+
+<style>
+ 
+
+</style>
