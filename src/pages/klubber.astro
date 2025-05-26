@@ -1,12 +1,50 @@
 ---
-import { CustomProvider } from "rsuite"
-import Layout from "../layouts/Layout.astro"
+import { CustomProvider } from "rsuite";
+import Layout from "../layouts/Layout.astro";
+import resources from "../data/resources.json";
 
+const norskeKlubber = resources
+  .filter((resource) => resource.country.toLowerCase() === "norge")
+  .sort((a, b) => a.name.localeCompare(b.name));
 
-const pageTitle = "Andre klubber"
+const utenlandskeKlubber = resources
+  .filter((resource) => resource.country.toLowerCase() !== "norge")
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+const pageTitle = "Andre klubber";
 ---
+
 <Layout pageTitle={pageTitle}>
-    <CustomProvider>
-        
-    </CustomProvider>
+  <CustomProvider>
+    <div class="container shadow-effect mx-auto p-6 md:p-12 mb-10">
+      <h1 class="tracking-tight">Andre klubber</h1>
+      <p>Her finner du linker til andre bilklubber i inn- og utland.</p>
+      <section class="grid grid-cols-1 md:grid-cols-2 pt-4">
+        <div>
+          <h3>Norske sider</h3>
+          <ul class="pt-2">
+            {
+              norskeKlubber.map((klubb) => (
+                <li class="text-lg">
+                  <a href={klubb.url}>{klubb.name}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div>
+            <h3>Utenlandske sider</h3>
+            <ul class="pt-2">
+              {
+                utenlandskeKlubber.map((klubb) => (
+                  <li class="text-lg">
+                    <a href={klubb.url}>{klubb.name}</a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+      </section>
+    </div>
+  </CustomProvider>
 </Layout>

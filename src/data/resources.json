@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "H. H. Franklin Club, Inc.",
+        "country": "USA",
+        "url": "https://franklincar.org/index.php"
+    },
+    {
+        "id": 2,
+        "name": "Norsk Veteranvogn Klubb",
+        "country": "Norge",
+        "url": "https://www.veteranvogn.no"
+    },
+    {
+        "id": 3,
+        "name": "Landsforeningen for",
+        "country": "Norge",
+        "url": "https://www.lmk.no"
+    },
+    {
+        "id": 4,
+        "name": "The Franklin Auto Museum",
+        "country": "USA",
+        "url": "https://franklinmuseum.org"
+    },
+    {
+        "id": 5,
+        "name": "Franklin Automobile Photography Collection",
+        "country": "USA",
+        "url": "https://www.clrc.org/digital/oha/index.html"
+    },
+    {
+        "id": 6,
+        "name": "Franklin Westrek",
+        "country": "USA",
+        "url": "https://franklinwestrek.weebly.com"
+    },
+    {
+        "id": 7,
+        "name": "PreWarCar.com - Franklin cars for sale",
+        "country": "USA",
+        "url": "https://www.prewarcar.com/cars/franklin"
+    }
+]

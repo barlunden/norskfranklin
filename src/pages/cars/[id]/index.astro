@@ -13,53 +13,56 @@ const hasImage = franklin.imageUrl && franklin.imageUrl.length > 0;
 const hasCharacteristicData = franklin.characteristics && franklin.characteristics.length > 0;
 ---
 <Layout>
-  <div class="container w-1/2 shadow-effect mx-auto p-(--card-padding) mb-10 rounded-(--card-radius) [--card-padding:--spacing(4)] [--card-radius:var(--radius-4xl)]">
+  <div class="container shadow-effect mx-auto mb-10">
     {hasImage ? (
       <img
         src={franklin.imageUrl}
         alt={`Bilde av ${franklin.name}`}
-        class="w-full h-auto mb-4 border-1 border-sky-800 image-shadow rounded-[calc(var(--card-radius)-var(--card-padding))]"
+        class="w-full h-auto border-1 border-sky-800 image-shadow"
       />
     ) : null}
-    <h2 class="tracking-tight">{franklin.year} {franklin.name}</h2>
-    <p><strong>Eier:</strong> {franklin.owner}</p>
-    <p><i>Denne seksjonen vil bli utvidet og oppdatert når alle kjente Frankliner i Norge er lagt inn i systemet.</i></p>
-    <div class="grid grid-cols-2 gap-4">
-      <div>
+    <div class="px-8 pt-4 pb-8">
 
-        <p><strong>Motor:</strong></p>
-        <ul class="list-disc list-inside">
-          <li>
-            {franklin.engine.cylinders} sylindrer
-          </li>
-          <li>
-            Volum: {franklin.engine.volume}L
-          </li>
-          <li>
-            {franklin.engine.power} hk
-          </li>
-        </ul>
+      <h2 class="tracking-tight">{franklin.year} {franklin.name}</h2>
+      <p><strong>Eier:</strong> {franklin.owner}</p>
+      <p><i>Denne seksjonen vil bli utvidet og oppdatert når alle kjente Frankliner i Norge er lagt inn i systemet.</i></p>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+  
+          <p><strong>Motor:</strong></p>
+          <ul class="list-disc list-inside">
+            <li>
+              {franklin.engine.cylinders} sylindrer
+            </li>
+            <li>
+              Volum: {franklin.engine.volume}L
+            </li>
+            <li>
+              {franklin.engine.power} hk
+            </li>
+          </ul>
+        </div>
+        <div>
+  
+          <p><strong>Girkasse:</strong></p>
+          <ul class="list-disc list-inside">
+            <li>
+              Type: {franklin.transmission.type}
+            </li>
+            <li>
+              Antall gir: {franklin.transmission.gears}
+            </li>
+          </ul>
+        </div>
       </div>
-      <div>
-
-        <p><strong>Girkasse:</strong></p>
-        <ul class="list-disc list-inside">
-          <li>
-            Type: {franklin.transmission.type}
-          </li>
-          <li>
-            Antall gir: {franklin.transmission.gears}
-          </li>
-        </ul>
-      </div>
+      {hasCharacteristicData ? (
+        <p><strong>Karakteristika:</strong></p>
+        <ul>
+        {franklin.characteristics.map((char) => (
+          <li>{char}</li>
+        ))}
+      </ul>) : null}
+      <a href="/franklininnorway">Tilbake til oversikten</a>
     </div>
-    {hasCharacteristicData ? (
-      <p><strong>Karakteristika:</strong></p>
-      <ul>
-      {franklin.characteristics.map((char) => (
-        <li>{char}</li>
-      ))}
-    </ul>) : null}
-    <a href="/franklininnorway">Tilbake til oversikten</a>
   </div>
 </Layout>
