@@ -13,7 +13,7 @@
     },
     {
         "id": 3,
-        "name": "Landsforeningen for",
+        "name": "Landsforbundet av Motorhistoriske kjøretøyklubber",
         "country": "Norge",
         "url": "https://www.lmk.no"
     },
@@ -40,5 +40,11 @@
         "name": "PreWarCar.com - Franklin cars for sale",
         "country": "USA",
         "url": "https://www.prewarcar.com/cars/franklin"
+    },
+    {
+        "id": 8,
+        "name": "Fédération Internationale des Véhicules Anciens",
+        "country": "Italia",
+        "url": "https://www.fiva.org/en"
     }
 ]
