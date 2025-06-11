@@ -25,33 +25,42 @@ const hasCharacteristicData = franklin.characteristics && franklin.characteristi
 
       <h2 class="tracking-tight">{franklin.year} {franklin.name}</h2>
       <p><strong>Eier:</strong> {franklin.owner}</p>
-      <p><i>Denne seksjonen vil bli utvidet og oppdatert når alle kjente Frankliner i Norge er lagt inn i systemet.</i></p>
       <div class="grid grid-cols-2 gap-4">
         <div>
   
           <p><strong>Motor:</strong></p>
           <ul class="list-disc list-inside">
-            <li>
-              {franklin.engine.cylinders} sylindrer
-            </li>
-            <li>
-              Volum: {franklin.engine.volume}L
-            </li>
-            <li>
-              {franklin.engine.power} hk
-            </li>
+            {franklin.engine?.cylinders && (
+              <li>
+                {franklin.engine.cylinders} sylindrer
+              </li>
+            )}
+            {franklin.engine?.volume && (
+              <li>
+                Volum: {franklin.engine.volume}L
+              </li>
+            )}
+            {franklin.engine?.power && (
+              <li>
+                {franklin.engine.power} hk
+              </li>
+            )}
           </ul>
         </div>
         <div>
   
           <p><strong>Girkasse:</strong></p>
           <ul class="list-disc list-inside">
-            <li>
-              Type: {franklin.transmission.type}
-            </li>
-            <li>
-              Antall gir: {franklin.transmission.gears}
-            </li>
+            {franklin.transmission?.type && (
+              <li>
+                Type: {franklin.transmission.type}
+              </li>
+            )}
+            {franklin.transmission?.gears && (
+              <li>
+                Antall gir: {franklin.transmission.gears}
+              </li>
+            )}
           </ul>
         </div>
       </div>

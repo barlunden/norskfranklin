@@ -9,7 +9,7 @@
       "power": 12
     },
     "transmission": {
-      "type": "planetgir",
+      "type": "Planetary gearbox",
       "gears": 2
     },
     "weight": 920,
@@ -27,7 +27,7 @@
       "power": 20
     },
     "transmission": {
-      "type": "planetgir",
+      "type": "Sliding gear, selective change",
       "gears": 3
     },
     "weight": 1500,
@@ -45,7 +45,7 @@
       "power": 20
     },
     "transmission": {
-      "type": "planetgir",
+      "type": "Sliding gear, selective change",
       "gears": 3
     },
     "weight": 1500,
@@ -63,7 +63,7 @@
       "power": 20
     },
     "transmission": {
-      "type": "planetgir",
+      "type": "Sliding gear, selective change",
       "gears": 3
     },
     "weight": 1500,
@@ -95,12 +95,12 @@
     "name": "Franklin 11A Sedan",
     "engine": {
       "cylinders": 6,
-      "volume": 2.0,
-      "power": 150
+      "volume": null,
+      "power": null
     },
     "transmission": {
-      "type": "automatic",
-      "gears": 6
+      "type": null,
+      "gears": null
     },
     "weight": 1500,
     "characteristics": [],
@@ -113,12 +113,12 @@
     "name": "Franklin 11A Coupe",
     "engine": {
       "cylinders": 6,
-      "volume": 2.0,
-      "power": 150
+      "volume": null,
+      "power": null
     },
     "transmission": {
-      "type": "automatic",
-      "gears": 6
+      "type": null,
+      "gears": null
     },
     "weight": 1500,
     "characteristics": [],
@@ -131,12 +131,12 @@
     "name": "Franklin 12A/B? Touring",
     "engine": {
       "cylinders": 6,
-      "volume": 2.0,
-      "power": 150
+      "volume": null,
+      "power": null
     },
     "transmission": {
-      "type": "automatic",
-      "gears": 6
+      "type": null,
+      "gears": null
     },
     "weight": 1500,
     "characteristics": [],
@@ -149,12 +149,12 @@
     "name": "Franklin 130 Sedan",
     "engine": {
       "cylinders": 6,
-      "volume": 2.0,
-      "power": 150
+      "volume": null,
+      "power": null
     },
     "transmission": {
-      "type": "automatic",
-      "gears": 6
+      "type": null,
+      "gears": null
     },
     "weight": 1500,
     "characteristics": [],
@@ -167,12 +167,12 @@
     "name": "Franklin 130 Coupe",
     "engine": {
       "cylinders": 6,
-      "volume": 2.0,
-      "power": 150
+      "volume": null,
+      "power": null
     },
     "transmission": {
-      "type": "automatic",
-      "gears": 6
+      "type": null,
+      "gears": null
     },
     "weight": 1500,
     "characteristics": [],
@@ -185,12 +185,12 @@
     "name": "Franklin 135 Sport Sedan",
     "engine": {
       "cylinders": 6,
-      "volume": 2.0,
-      "power": 150
+      "volume": null,
+      "power": null
     },
     "transmission": {
-      "type": "automatic",
-      "gears": 6
+      "type": null,
+      "gears": null
     },
     "weight": 1500,
     "characteristics": ["Converted to Roadster"],
@@ -203,12 +203,12 @@
     "name": "Franklin 153 Sedan",
     "engine": {
       "cylinders": 6,
-      "volume": 2.0,
-      "power": 150
+      "volume": null,
+      "power": null
     },
     "transmission": {
-      "type": "automatic",
-      "gears": 6
+      "type": "Sliding gear, selective change",
+      "gears": 3
     },
     "weight": 1500,
     "characteristics": ["Dietrich body built by Walker"],
