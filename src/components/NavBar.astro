@@ -16,7 +16,7 @@ const { pathname } = Astro.url;
           class="logo-img"
         />
       </a>
-      <ul class="nav-list">
+      <ul class="nav-list" id="nav-list">
         <li>
           <a
             href="/"
@@ -63,6 +63,19 @@ const { pathname } = Astro.url;
           </a>
         </li>
       </ul>
+      <div class="dropdown-menu" id="dropdown-menu">
+        <div class="dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+          Meny
+          <span class="dropdown-arrow"></span>
+        </div>
+        <ul class="dropdown-list">
+          <li><a href="/" class={pathname === "/" ? "nav-link active" : "nav-link"}>Hjem</a></li>
+          <li><a href="/history" class={pathname === "/history" ? "nav-link active" : "nav-link"}>Historikk</a></li>
+          <li><a href="/franklininnorway" class={pathname === "/franklininnorway" ? "nav-link active" : "nav-link"}>Biler i Norge</a></li>
+          <li><a href="/klubber" class={pathname === "/klubber" ? "nav-link active" : "nav-link"}>Andre sider</a></li>
+          <li><a href="/kontakt" class={pathname === "/kontakt" ? "nav-link active" : "nav-link"}>Kontakt</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
@@ -103,6 +116,77 @@ const { pathname } = Astro.url;
   padding: 0;
   margin: 0;
 }
+.dropdown-menu {
+  display: none;
+  position: relative;
+}
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background: none;
+  color: #0f172a;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+  box-shadow: none;
+  outline: none;
+  transition: color 0.2s;
+}
+.dropdown-toggle:focus {
+  color: #2563eb;
+}
+.dropdown-arrow {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.2em;
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  border: none;
+  vertical-align: middle;
+  /* Sørg for at pilen roterer rundt sitt eget midtpunkt */
+}
+.dropdown-arrow::after {
+  content: '';
+  display: block;
+  width: 0.6em;
+  height: 0.6em;
+  border-right: 2.5px solid #0f172a;
+  border-bottom: 2.5px solid #0f172a;
+  transform: rotate(225deg);
+  margin: 0.35em auto 0 auto; /* Flytt pila lenger ned for baseline-flukt */
+  box-sizing: border-box;
+  /* Sentrer rotasjonspunktet */
+  transform-origin: 50% 50%;
+}
+.dropdown-menu.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+.dropdown-list {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  background: #fff;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+  border-radius: 0 0 8px 8px;
+  min-width: 200px;
+  z-index: 100;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  list-style: none;
+  font-size: 1rem;
+  transition: font-size 0.2s;
+}
+.dropdown-menu.open .dropdown-list {
+  display: block;
+  font-size: 1.25rem;
+}
 .nav-link {
   color: #0f172a;
   text-decoration: none;
@@ -118,7 +202,7 @@ const { pathname } = Astro.url;
   border-bottom: 2px solid #2563eb; /* blå underline for aktiv */
   color: #2563eb;
 }
-@media (min-width: 768px) {
+@media (min-width: 966px) {
   .navbar-inner {
     flex-direction: row;
   }
@@ -126,4 +210,36 @@ const { pathname } = Astro.url;
     margin-bottom: 0;
   }
 }
+@media (max-width: 675px) {
+  .nav-list {
+    display: none;
+  }
+  .dropdown-menu {
+    display: block;
+  }
+}
 </style>
+<script type="text/javascript">
+(function() {
+  const menu = document.getElementById('dropdown-menu');
+  const btn = menu.querySelector('.dropdown-toggle');
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', menu.classList.contains('open'));
+  });
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', menu.classList.contains('open'));
+    }
+  });
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target)) {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
