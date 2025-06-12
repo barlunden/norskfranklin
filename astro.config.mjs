@@ -9,9 +9,13 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   output: "server",
   adapter: netlify({}),
-  site: "https://norskfranklinregister.netlify.app",
+  site: "https://norskfranklinregister.no",
   
   integrations: [react()],
+
+  image: {
+    domains: ['norskfranklinregister.no', 'www.norskfranklinregister.no']
+  },
 
   vite: {
     plugins: [tailwindcss()],

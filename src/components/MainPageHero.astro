@@ -4,36 +4,41 @@ import image from "/src/images/Franklin9BII.jpeg";
 
 const optimizedImage = await getImage({ src: image });
 ---
-<section class="container mx-auto grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2">
-  <div class="hero-image-container order-2 lg:order-2 flex justify-center items-center">
-    <img
-      src={optimizedImage.src}
-      alt="Franklin 9B"
-      class="max-w-full h-auto shadow-effect"
-    />
-  </div>
-  <div class="hero-container order-1 lg:order-1 bg-yellow-50/70 p-8 shadow-effect flex flex-col justify-center">
-    <h2 class="text-3xl font-bold tracking-tight mb-4">Norsk Franklinregister</h2>
-    <p class="mb-3">
-      Velkommen til Norsk Franklinregister, en nettside dedikert til de unike og
-      innovative bilene fra H.H. Franklin Manufacturing Company.
-    </p>
-    <p class="mb-3">
-      Franklin-bilene, produsert i USA fra 1902 til 1934, var kjent for sin
-      luftkjølte motor og lette konstruksjon. Dette gjorde dem til et særpreget
-      innslag i bilhistorien, og de har i dag en liten, men dedikert gruppe
-      entusiaster i Norge.
-    </p>
-    <p>
-      Denne nettsiden er ment å være et samlingssted for norske
-      Franklin-entusiaster, og vil inneholde informasjon til nytte og glede for
-      både eiere og interesserte.
-    </p>
+
+<section class="component-container">
+  <div class="field-container">
+    <div
+      class="field order-2 lg:order-2 justify-center items-center"
+    >
+      <img
+        src={optimizedImage.src}
+        alt="Franklin 9B"
+        class="max-w-full h-auto shadow-effect"
+      />
+    </div>
+    <div
+      class="field order-1 lg:order-1 bg-yellow-50/70 p-8 shadow-effect flex flex-col justify-center"
+    >
+      <h2 class="tracking-tight mb-4">
+        Norsk Franklinregister
+      </h2>
+      <p class="mb-3">
+        Velkommen til Norsk Franklinregister, en nettside dedikert til de unike
+        og innovative bilene fra H.H. Franklin Manufacturing Company.
+      </p>
+      <p class="mb-3">
+        Franklin-bilene, produsert i USA fra 1902 til 1934, var kjent for sin
+        luftkjølte motor og lette konstruksjon. Dette gjorde dem til et
+        særpreget innslag i bilhistorien, og de har i dag en liten, men dedikert
+        gruppe entusiaster i Norge.
+      </p>
+      <p>
+        Denne nettsiden er ment å være et samlingssted for norske
+        Franklin-entusiaster, og vil inneholde informasjon til nytte og glede
+        for både eiere og interesserte.
+      </p>
+    </div>
   </div>
 </section>
 
-
-<style>
- 
-
-</style>
+<style></style>
