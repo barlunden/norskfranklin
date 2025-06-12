@@ -1,6 +1,6 @@
 ---
 import { getImage } from 'astro:assets';
-import logo from '../images/FranklinLogo.png';
+import logo from '../../public/images/FranklinLogo.png';
 
 const optimizedLogo = await getImage({ src: logo });
 const { pathname } = Astro.url;
