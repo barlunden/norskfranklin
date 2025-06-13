@@ -123,3 +123,7 @@ h6 {
 .paragraph {
   margin-bottom: 1rem;
 }
+
+.developer {
+  font-size: small;
+}
