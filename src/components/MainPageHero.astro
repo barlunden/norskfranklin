@@ -6,27 +6,25 @@ const optimizedImage = await getImage({ src: image });
 ---
 
 <section class="component-container">
-  <div class="field-container">
-    <div
-      class="field order-2 lg:order-2 justify-center items-center"
-    >
+  <div class="field-container equal-height-container">
+    <div class="field order-2 lg:order-2 image-field equal-height-item">
       <img
         src={optimizedImage.src}
         alt="Franklin 9B"
-        class="max-w-full h-auto shadow-effect"
+        class="shadow-effect hero-img"
       />
     </div>
     <div
-      class="field order-1 lg:order-1 bg-yellow-50/70 p-8 shadow-effect flex flex-col justify-center"
+      class="field order-1 lg:order-1 bg-yellow-50/70 p-8 shadow-effect flex flex-col justify-center equal-height-item"
     >
-      <h2 class="tracking-tight mb-4">
+      <h2 class="tracking-tight paragraph">
         Norsk Franklinregister
       </h2>
-      <p class="mb-3">
+      <p class="paragraph">
         Velkommen til Norsk Franklinregister, en nettside dedikert til de unike
         og innovative bilene fra H.H. Franklin Manufacturing Company.
       </p>
-      <p class="mb-3">
+      <p class="paragraph">
         Franklin-bilene, produsert i USA fra 1902 til 1934, var kjent for sin
         luftkjølte motor og lette konstruksjon. Dette gjorde dem til et
         særpreget innslag i bilhistorien, og de har i dag en liten, men dedikert
@@ -41,4 +39,49 @@ const optimizedImage = await getImage({ src: image });
   </div>
 </section>
 
-<style></style>
+<style>
+.equal-height-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.equal-height-item {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+.image-field {
+  /* Ingen fast høyde, arver høyde fra flex container */
+}
+.hero-img {
+  width: 100%;
+  height: auto; /* Tilbakestill til auto for å vise bildet korrekt */
+  object-fit: cover;
+  display: block;
+}
+@media (min-width: 1025px) {
+  .equal-height-container {
+    align-items: stretch;
+  }
+  .image-field,
+  .equal-height-item {
+    height: auto;
+  }
+  .hero-img {
+    height: 100%; /* Fyll høyden til flex-item på store skjermer */
+    min-height: 1px;
+  }
+}
+@media (max-width: 1024px) {
+  .equal-height-container {
+    flex-direction: column;
+  }
+  .equal-height-item {
+    min-height: unset;
+  }
+  .hero-img {
+    height: auto;
+    min-height: 0;
+  }
+}
+</style>
