@@ -32,6 +32,9 @@
   box-sizing: border-box;
   --card-radius: 20px;
   --card-padding: 12px;
+  --form-padding: 26px;
+  --form-radius: 36px;
+  --form-field-radius: calc(var(--form-radius) - var(--form-padding));
   --image-radius: calc(var(--card-radius) - var(--card-padding));
   --button-radius: calc(var(--card-radius) / 4);
   --outer-margin: clamp(1rem, 5vw, 3rem);
