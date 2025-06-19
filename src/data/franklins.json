@@ -42,7 +42,7 @@
     "engine": {
       "cylinders": 6,
       "volume": 3.3,
-      "power": 20
+      "power": 25
     },
     "transmission": {
       "type": "Sliding gear, selective change",
@@ -60,7 +60,7 @@
     "engine": {
       "cylinders": 6,
       "volume": 3.3,
-      "power": 20
+      "power": 25
     },
     "transmission": {
       "type": "Sliding gear, selective change",
@@ -78,7 +78,7 @@
     "engine": {
       "cylinders": 6,
       "volume": 3.3,
-      "power": 20
+      "power": 25
     },
     "transmission": {
       "type": "planetgir",
