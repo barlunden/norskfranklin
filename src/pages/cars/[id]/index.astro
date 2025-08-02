@@ -10,17 +10,23 @@ if (!franklin) {
 }
 
 const hasImage = franklin.imageUrl && franklin.imageUrl.length > 0;
+const hasPhotographer = franklin.photographer && franklin.photographer.length > 0;
 const hasCharacteristicData = franklin.characteristics && franklin.characteristics.length > 0;
 ---
 <Layout>
   <div class="container shadow-effect mx-auto mb-10">
-    {hasImage ? (
-      <img
+    <div>
+      {hasImage ? (
+        <img
         src={franklin.imageUrl}
         alt={`Bilde av ${franklin.name}`}
         class="w-full h-auto border-1 border-sky-800 image-shadow"
-      />
-    ) : null}
+        />
+      ) : null}
+      {hasPhotographer ? ( 
+        <p class="pt-1 pr-2 font-bold text-right">Foto: <span class="font-normal">{franklin.photographer}</span></p>
+      ) : null}
+      </div>
     <div class="px-8 pt-4 pb-8">
 
       <h2 class="tracking-tight">{franklin.year} {franklin.name}</h2>
