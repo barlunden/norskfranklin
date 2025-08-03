@@ -23,7 +23,7 @@
     "name": "Franklin 9B Roadster",
     "engine": {
       "cylinders": 6,
-      "volume": 3.3,
+      "volume": 3.6,
       "power": 20
     },
     "transmission": {
@@ -41,7 +41,7 @@
     "name": "Franklin 9B Touring",
     "engine": {
       "cylinders": 6,
-      "volume": 3.3,
+      "volume": 3.6,
       "power": 25
     },
     "transmission": {
@@ -59,7 +59,7 @@
     "name": "Franklin 9B Touring",
     "engine": {
       "cylinders": 6,
-      "volume": 3.3,
+      "volume": 3.6,
       "power": 25
     },
     "transmission": {
@@ -78,7 +78,7 @@
     "name": "Franklin 9B Sedan 2-Door",
     "engine": {
       "cylinders": 6,
-      "volume": 3.3,
+      "volume": 3.6,
       "power": 25
     },
     "transmission": {
