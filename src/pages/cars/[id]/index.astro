@@ -15,18 +15,18 @@ const hasCharacteristicData = franklin.characteristics && franklin.characteristi
 ---
 <Layout>
   <div class="container shadow-effect mx-auto mb-10">
-    <div>
+  <figure class="relative w-full">
       {hasImage ? (
         <img
         src={franklin.imageUrl}
         alt={`Bilde av ${franklin.name}`}
-        class="w-full h-auto border-1 border-sky-800 image-shadow"
+        class="w-full h-auto object-cover border-1 border-sky-800 image-shadow"
         />
       ) : null}
       {hasPhotographer ? ( 
-        <p class="pt-1 pr-2 font-bold text-right">Foto: <span class="font-normal">{franklin.photographer}</span></p>
+        <figcaption class="absolute bottom-0 right-0 backdrop-blur-md bg-white/20 text-black text-xs sm:text-sm px-1 py-0.5 sm:p-2 sm:pb-1">Foto: <span>{franklin.photographer}</span></figcaption>
       ) : null}
-      </div>
+      </figure>
     <div class="px-8 pt-4 pb-8">
 
       <h2 class="tracking-tight">{franklin.year} {franklin.name}</h2>
@@ -81,3 +81,7 @@ const hasCharacteristicData = franklin.characteristics && franklin.characteristi
     </div>
   </div>
 </Layout>
+
+<style>
+  
+</style>
