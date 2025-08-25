@@ -29,7 +29,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-image-gallery": "^1.4.0",
-    "rsuite": "^5.78.1",
+    "rsuite": "^5.83.3",
     "sharp": "^0.33.3",
     "tailwindcss": "^4.1.3"
   }

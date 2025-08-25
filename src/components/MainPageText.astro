@@ -1,0 +1,25 @@
+---
+const { pathname } = Astro.url;
+---
+
+<section class="component-container">
+    <h2 class="text-center">Om registeret</h2>
+  <div class="px-8 py-4">
+    <p class="paragraph">
+      Norsk Franklinregister er ingen "klubb" for medlemskap, vedtekter,
+      sosialisering og administrerte fellesaktiviteter. Denne nettsiden er ment
+      å være et samlingssted for norske Franklin-entusiaster, og vil inneholde
+      informasjon til nytte og glede for både eiere og interesserte.
+    </p>
+    <p>
+      Innlegg med tekst/bilder kan sendes inn på <a
+        href="/kontakt"
+        class={pathname === "/kontakt" ? "nav-link active" : "nav-link"}
+        aria-current={pathname === "/kontakt" ? "page" : undefined}
+      >
+        kontaktsiden</a
+      >. Her kan meldes eierskifter, tekniske spørsmål, erfaringer, gode historier og annet av
+      generell interesse.
+    </p>
+  </div>
+</section>

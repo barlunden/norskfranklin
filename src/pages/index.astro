@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { CustomProvider } from "rsuite";
 import { Karusell } from "../components/Karusell";
 import MainPageHero from "../components/MainPageHero.astro";
+import MainPageText from "../components/MainPageText.astro";
 
 const pageTitle = "Norsk Franklinklubb";
 
@@ -14,6 +15,7 @@ const pageTitle = "Norsk Franklinklubb";
   <CustomProvider>
     <section class="outer-container">
       <MainPageHero />
+      <MainPageText />
     </section>
     <!-- <Karusell client:load /> -->
   </CustomProvider>
