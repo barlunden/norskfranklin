@@ -1,6 +1,7 @@
 ---
 import { getImage } from "astro:assets";
 import image from "../../public/images/Franklin9BII.jpeg";
+const { pathname } = Astro.url;
 
 const optimizedImage = await getImage({ src: image });
 ---
@@ -17,9 +18,7 @@ const optimizedImage = await getImage({ src: image });
     <div
       class="field order-1 lg:order-1 bg-yellow-50/70 p-8 shadow-effect flex flex-col justify-center equal-height-item"
     >
-      <h2 class="tracking-tight paragraph">
-        Norsk Franklinregister
-      </h2>
+      <h2 class="tracking-tight paragraph">Norsk Franklinregister</h2>
       <p class="paragraph">
         Velkommen til Norsk Franklinregister, en nettside dedikert til de unike
         og innovative bilene fra H.H. Franklin Manufacturing Company.
@@ -30,58 +29,69 @@ const optimizedImage = await getImage({ src: image });
         særpreget innslag i bilhistorien, og de har i dag en liten, men dedikert
         gruppe entusiaster i Norge.
       </p>
+      <p class="paragraph">
+        Norsk Franklinregister er ingen "klubb" for medlemskap, vedtekter,
+        sosialisering og administrerte fellesaktiviteter. Denne nettsiden er
+        ment å være et samlingssted for norske Franklin-entusiaster, og vil
+        inneholde informasjon til nytte og glede for både eiere og interesserte.
+      </p>
       <p>
-        Denne nettsiden er ment å være et samlingssted for norske
-        Franklin-entusiaster, og vil inneholde informasjon til nytte og glede
-        for både eiere og interesserte.
+        Innlegg med tekst/bilder kan sendes inn på <a
+          href="/kontakt"
+          class={pathname === "/kontakt" ? "nav-link active" : "nav-link"}
+          aria-current={pathname === "/kontakt" ? "page" : undefined}
+        >
+          kontaktsiden</a
+        >. Her kan meldes eierskifter, tekniske spørsmål, erfaringer og annet av
+        generell interesse.
       </p>
     </div>
   </div>
 </section>
 
 <style>
-.equal-height-container {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-}
-.equal-height-item {
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-}
-.image-field {
-  /* Ingen fast høyde, arver høyde fra flex container */
-}
-.hero-img {
-  width: 100%;
-  height: auto; /* Tilbakestill til auto for å vise bildet korrekt */
-  object-fit: cover;
-  display: block;
-}
-@media (min-width: 1025px) {
   .equal-height-container {
+    display: flex;
+    flex-direction: row;
     align-items: stretch;
   }
-  .image-field,
   .equal-height-item {
-    height: auto;
-  }
-  .hero-img {
-    height: 100%; /* Fyll høyden til flex-item på store skjermer */
-    min-height: 1px;
-  }
-}
-@media (max-width: 1024px) {
-  .equal-height-container {
+    flex: 1 1 0;
+    display: flex;
     flex-direction: column;
   }
-  .equal-height-item {
-    min-height: unset;
+  .image-field {
+    /* Ingen fast høyde, arver høyde fra flex container */
   }
   .hero-img {
-    height: auto;
-    min-height: 0;
+    width: 100%;
+    height: auto; /* Tilbakestill til auto for å vise bildet korrekt */
+    object-fit: cover;
+    display: block;
   }
-}
+  @media (min-width: 1025px) {
+    .equal-height-container {
+      align-items: stretch;
+    }
+    .image-field,
+    .equal-height-item {
+      height: auto;
+    }
+    .hero-img {
+      height: 100%; /* Fyll høyden til flex-item på store skjermer */
+      min-height: 1px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .equal-height-container {
+      flex-direction: column;
+    }
+    .equal-height-item {
+      min-height: unset;
+    }
+    .hero-img {
+      height: auto;
+      min-height: 0;
+    }
+  }
 </style>

@@ -56,17 +56,27 @@ export const timelineData = [
     },
     {
         key: "12",
-        year: "1932",
-        information: "Den store V12-motoren (150 hk, 398 kubikktommer) introduseres.",
-    },
-    {
-        key: "13",
         year: "1934",
         information: "Bilproduksjonen avsluttes når H.H. Franklin Co. går konkurs under den store depresjonen.",
     },
     {
-        key: "14",
+        key: "13",
         year: "1937",
-        information: "Doman-Marks Engine Co. kjøper rettighetene til Franklin. Selskapet endrer navn til Aircooled Motors Corp.",
+        information: "Doman-Marks Engine Co. kjøper rettighetene til Franklin. Selskapet endrer navn til Aircooled Motors Corp (AMC), som fortsatte motorproduksjon for luftfart.",
+    },
+    {
+        key: "14",
+        year: "1947",
+        information: "Franklin stjernemotor ble benyttet i Tucker Torpedo Sedan, som ble produsert i 57 eksemplarer."
+    },
+    {
+        key: "15",
+        year: "1947-52",
+        information: "Franklin motorer benyttes i helikopteret Sikorsky S-52."
+    },
+    {
+        key: "16",
+        year: "1975",
+        information: "Hele produksjonsaparatet ble solgt til Polen, der motorene er videreutviklet og fremdeles produseres."
     }
 ]

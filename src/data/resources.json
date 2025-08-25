@@ -46,5 +46,23 @@
         "name": "Fédération Internationale des Véhicules Anciens",
         "country": "Italia",
         "url": "https://www.fiva.org/en"
+    },
+    {
+        "id": 9,
+        "name": "Franklin Automobile Enthusiasts",
+        "country": "Facebook",
+        "url": "https://www.facebook.com/groups/251339938628026/"
+    },
+    {
+        "id": 10,
+        "name": "Show us Your Franklin Car",
+        "country": "Facebook",
+        "url": "https://www.facebook.com/groups/581999361957524/"
+    },
+    {
+        "id": 11,
+        "name": "Franklin car parts for sale. Or parts wanted",
+        "country": "Facebook",
+        "url": "https://www.facebook.com/groups/439046692964004/"
     }
 ]
