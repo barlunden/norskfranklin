@@ -1,0 +1,50 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import carData from '../../../data/franklins.json';
+
+const { id } = Astro.params;
+const franklin = carData.find((c) => c.id === Number(id));
+
+if (!franklin) {
+  throw new Error(`Ingen bil funnet med ID ${id}`);
+}
+const images = franklin.images || [];
+---
+<Layout>
+  <div class="container mx-auto mb-10 px-4">
+    <h2 class="font-bold mb-6 text-center">Fotoalbum: {franklin.year} {franklin.name}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {images.map((img) => (
+        <figure class="bg-white rounded shadow p-2 flex flex-col items-center h-full">
+          <div class="w-full flex-1 flex items-center justify-center">
+            <img src={img.url} alt={`Bilde av ${franklin.name}`} class="w-full h-auto object-cover rounded" />
+          </div>
+          {'photographer' in img && img.photographer ? (
+            <figcaption class="text-xs text-gray-700 mt-2 w-full text-center self-end">Foto: <span>{img.photographer}</span></figcaption>
+          ) : null}
+        </figure>
+      ))}
+    </div>
+    <div class="mt-8 text-center">
+      <a href={`/cars/${id}`} class="text-blue-700 pt-4 underline">Tilbake til bilfakta</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

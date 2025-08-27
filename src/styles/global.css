@@ -89,10 +89,10 @@ h6 {
 }
 
 .layout-container {
-    max-width: 1280px; /* eller annan fast breidde */
-    margin: 0 auto;
-    padding: 0 1rem; /* evt. padding for luft på sidene */
-  }
+  max-width: 1280px; /* eller annan fast breidde */
+  margin: 0 auto;
+  padding: 0 1rem; /* evt. padding for luft på sidene */
+}
 
 .field-container {
   display: grid;
@@ -129,4 +129,10 @@ h6 {
 
 .developer {
   font-size: small;
+}
+
+@media (max-width: 600px) {
+  .force-text-sm > p {
+    @apply text-sm;
+  }
 }

@@ -9,24 +9,26 @@ if (!franklin) {
   throw new Error(`Ingen bil funnet med ID ${id}`);
 }
 
-const hasImage = franklin.imageUrl && franklin.imageUrl.length > 0;
-const hasPhotographer = franklin.photographer && franklin.photographer.length > 0;
+const hasImages = franklin.images && franklin.images.length > 0;
+const hasMultipleImages = franklin.images && franklin.images.length > 1;
 const hasCharacteristicData = franklin.characteristics && franklin.characteristics.length > 0;
 ---
 <Layout>
   <div class="container shadow-effect mx-auto mb-10">
-  <figure class="relative w-full">
-      {hasImage ? (
+    {hasImages && franklin.images[0] ? (
+      <figure class="relative bg-white rounded shadow p-4 flex flex-col items-center w-full mb-4">
         <img
-        src={franklin.imageUrl}
-        alt={`Bilde av ${franklin.name}`}
-        class="w-full h-auto object-cover border-1 border-sky-800 shadow-effect"
+          src={franklin.images[0].url}
+          alt={`Bilde av ${franklin.name}`}
+          class="w-full h-auto object-cover rounded"
         />
-      ) : null}
-      {hasPhotographer ? ( 
-        <figcaption class="absolute bottom-0 right-0 backdrop-blur-md bg-white/20 text-black text-xs sm:text-sm px-1 py-0.5 sm:p-2 sm:pb-1">Foto: <span>{franklin.photographer}</span></figcaption>
-      ) : null}
+        {'photographer' in franklin.images[0] && franklin.images[0].photographer ? (
+          <figcaption class="text-xs text-gray-700 mt-2 w-full text-center self-end">
+            Foto: <span>{franklin.images[0].photographer}</span>
+          </figcaption>
+        ) : null}
       </figure>
+    ) : null}
     <div class="px-8 pt-4 pb-8">
 
       <h2 class="tracking-tight">{franklin.year} {franklin.name}</h2>
@@ -77,7 +79,10 @@ const hasCharacteristicData = franklin.characteristics && franklin.characteristi
           <li>{char}</li>
         ))}
       </ul>) : null}
-      <a href="/franklininnorway">Tilbake til oversikten</a>
+      {hasMultipleImages ? (
+        <a href={`/cars/${id}/album`} class="block mt-4 text-blue-700 underline">Se flere bilder</a>
+      ) : null}
+      <a href="/franklininnorway" class="block mt-2">Tilbake til oversikten</a>
     </div>
   </div>
 </Layout>

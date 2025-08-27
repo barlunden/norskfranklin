@@ -15,8 +15,11 @@
     "weight": 920,
     "characteristics": [],
     "owner": "Bjørn Skjærvik",
-    "imageUrl": "/images/1905Franklin.jpg",
-    "photographer": "Knut Erik Bjerkeseth"
+    "images": [
+      { "url": "/images/1905Franklin.jpg", "photographer": "Knut Erik Bjerkeseth" },
+      { "url": "/images/1905Franklin3.jpg", "photographer": "Knut Erik Bjerkeseth" },
+      { "url": "/images/1905Franklin2.jpg", "photographer": "Knut Erik Bjerkeseth" }
+    ]
   },
   {
     "id": 2,
@@ -34,7 +37,7 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Bjørn Skjærvik",
-    "imageUrl": ""
+  "images": []
   },
   {
     "id": 3,
@@ -52,7 +55,7 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Egil Hagen",
-    "imageUrl": ""
+  "images": []
   },
   {
     "id": 4,
@@ -70,8 +73,12 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Trude Stray Bjerkeseth",
-    "imageUrl": "/images/Grensepassering.jpg",
-    "photographer": "Stian Bruun"
+    "images": [
+      { "url": "/images/Grensepassering.jpg", "photographer": "Stian Bruun" },
+      { "url": "/images/TSB9B.jpg", "photographer": "Knut Erik Bjerkeseth" },
+      { "url": "/images/TSB9B-2.jpg" },
+      { "url": "/images/FranklinRondane2.jpeg", "photographer": "Åge Jan Barlund"}
+    ]
   },
   {
     "id": 5,
@@ -89,7 +96,7 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Eivind Daldorff",
-    "imageUrl": ""
+  "images": []
   },
   {
     "id": 6,
@@ -107,7 +114,7 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Toralf og Ingar Braute",
-    "imageUrl": ""
+  "images": []
   },
   {
     "id": 7,
@@ -125,7 +132,7 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Lasse Steeg Andersen",
-    "imageUrl": ""
+  "images": []
   },
   {
     "id": 8,
@@ -143,7 +150,7 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Bjarte Ingmar Nordgård",
-    "imageUrl": ""
+  "images": []
   },
   {
     "id": 9,
@@ -161,7 +168,7 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Lasse Steeg Andersen",
-    "imageUrl": ""
+  "images": []
   },
   {
     "id": 10,
@@ -179,7 +186,9 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Sverre Haugesten",
-    "imageUrl": "/images/Franklin1929I.jpg"
+    "images": [
+      { "url": "/images/Franklin1929I.jpg" }
+    ]
   },
   {
     "id": 11,
@@ -197,7 +206,7 @@
     "weight": 1500,
     "characteristics": ["Converted to Roadster"],
     "owner": "Harald Olsen",
-    "imageUrl": ""
+  "images": []
   },
   {
     "id": 12,
@@ -215,6 +224,6 @@
     "weight": 1500,
     "characteristics": ["Dietrich body built by Walker"],
     "owner": "Knut Erik Bjerkeseth",
-    "imageUrl": ""
+  "images": []
   }
 ]
