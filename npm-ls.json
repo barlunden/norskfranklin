@@ -1,0 +1,175 @@
+{
+  "version": "0.0.1",
+  "name": "norskfranklin",
+  "problems": [
+    "missing: @astrojs/netlify@^6.2.5, required by norskfranklin@0.0.1",
+    "missing: @astrojs/react@^4.2.3, required by norskfranklin@0.0.1",
+    "missing: @coreui/coreui@^5.2.0, required by norskfranklin@0.0.1",
+    "missing: @coreui/react@^5.5.0, required by norskfranklin@0.0.1",
+    "missing: @fontsource-variable/josefin-sans@^5.2.5, required by norskfranklin@0.0.1",
+    "missing: @fontsource-variable/playfair-display@^5.2.5, required by norskfranklin@0.0.1",
+    "missing: @fontsource/poppins@^5.2.5, required by norskfranklin@0.0.1",
+    "missing: @heroui/react@^2.7.5, required by norskfranklin@0.0.1",
+    "missing: @rsuite/icons@^1.3.0, required by norskfranklin@0.0.1",
+    "missing: @tailwindcss/vite@^4.0.14, required by norskfranklin@0.0.1",
+    "missing: @types/react-dom@^19.0.4, required by norskfranklin@0.0.1",
+    "missing: @types/react@^19.0.11, required by norskfranklin@0.0.1",
+    "missing: antd@^5.24.5, required by norskfranklin@0.0.1",
+    "missing: astro-imagetools@^0.2.7, required by norskfranklin@0.0.1",
+    "missing: astro@^5.6.1, required by norskfranklin@0.0.1",
+    "missing: file-type@^18.4.0, required by norskfranklin@0.0.1",
+    "missing: framer-motion@^12.6.0, required by norskfranklin@0.0.1",
+    "missing: react-dom@^19.0.0, required by norskfranklin@0.0.1",
+    "missing: react-image-gallery@^1.4.0, required by norskfranklin@0.0.1",
+    "missing: react@^19.0.0, required by norskfranklin@0.0.1",
+    "missing: rsuite@^5.83.3, required by norskfranklin@0.0.1",
+    "missing: sharp@^0.33.3, required by norskfranklin@0.0.1",
+    "missing: tailwindcss@^4.1.3, required by norskfranklin@0.0.1"
+  ],
+  "dependencies": {
+    "@astrojs/netlify": {
+      "required": "^6.2.5",
+      "missing": true,
+      "problems": [
+        "missing: @astrojs/netlify@^6.2.5, required by norskfranklin@0.0.1"
+      ]
+    },
+    "@astrojs/react": {
+      "missing": true,
+      "problems": [
+        "missing: @astrojs/react@^4.2.3, required by norskfranklin@0.0.1"
+      ]
+    },
+    "@coreui/coreui": {
+      "missing": true,
+      "problems": [
+        "missing: @coreui/coreui@^5.2.0, required by norskfranklin@0.0.1"
+      ]
+    },
+    "@coreui/react": {
+      "missing": true,
+      "problems": [
+        "missing: @coreui/react@^5.5.0, required by norskfranklin@0.0.1"
+      ]
+    },
+    "@fontsource-variable/josefin-sans": {
+      "missing": true,
+      "problems": [
+        "missing: @fontsource-variable/josefin-sans@^5.2.5, required by norskfranklin@0.0.1"
+      ]
+    },
+    "@fontsource-variable/playfair-display": {
+      "missing": true,
+      "problems": [
+        "missing: @fontsource-variable/playfair-display@^5.2.5, required by norskfranklin@0.0.1"
+      ]
+    },
+    "@fontsource/poppins": {
+      "missing": true,
+      "problems": [
+        "missing: @fontsource/poppins@^5.2.5, required by norskfranklin@0.0.1"
+      ]
+    },
+    "@heroui/react": {
+      "missing": true,
+      "problems": [
+        "missing: @heroui/react@^2.7.5, required by norskfranklin@0.0.1"
+      ]
+    },
+    "@rsuite/icons": {
+      "missing": true,
+      "problems": [
+        "missing: @rsuite/icons@^1.3.0, required by norskfranklin@0.0.1"
+      ]
+    },
+    "@tailwindcss/vite": {
+      "missing": true,
+      "problems": [
+        "missing: @tailwindcss/vite@^4.0.14, required by norskfranklin@0.0.1"
+      ]
+    },
+    "@types/react-dom": {
+      "missing": true,
+      "problems": [
+        "missing: @types/react-dom@^19.0.4, required by norskfranklin@0.0.1"
+      ]
+    },
+    "@types/react": {
+      "missing": true,
+      "problems": [
+        "missing: @types/react@^19.0.11, required by norskfranklin@0.0.1"
+      ]
+    },
+    "antd": {
+      "missing": true,
+      "problems": [
+        "missing: antd@^5.24.5, required by norskfranklin@0.0.1"
+      ]
+    },
+    "astro-imagetools": {
+      "missing": true,
+      "problems": [
+        "missing: astro-imagetools@^0.2.7, required by norskfranklin@0.0.1"
+      ]
+    },
+    "astro": {
+      "missing": true,
+      "problems": [
+        "missing: astro@^5.6.1, required by norskfranklin@0.0.1"
+      ]
+    },
+    "file-type": {
+      "missing": true,
+      "problems": [
+        "missing: file-type@^18.4.0, required by norskfranklin@0.0.1"
+      ]
+    },
+    "framer-motion": {
+      "missing": true,
+      "problems": [
+        "missing: framer-motion@^12.6.0, required by norskfranklin@0.0.1"
+      ]
+    },
+    "react-dom": {
+      "missing": true,
+      "problems": [
+        "missing: react-dom@^19.0.0, required by norskfranklin@0.0.1"
+      ]
+    },
+    "react-image-gallery": {
+      "missing": true,
+      "problems": [
+        "missing: react-image-gallery@^1.4.0, required by norskfranklin@0.0.1"
+      ]
+    },
+    "react": {
+      "missing": true,
+      "problems": [
+        "missing: react@^19.0.0, required by norskfranklin@0.0.1"
+      ]
+    },
+    "rsuite": {
+      "missing": true,
+      "problems": [
+        "missing: rsuite@^5.83.3, required by norskfranklin@0.0.1"
+      ]
+    },
+    "sharp": {
+      "missing": true,
+      "problems": [
+        "missing: sharp@^0.33.3, required by norskfranklin@0.0.1"
+      ]
+    },
+    "tailwindcss": {
+      "missing": true,
+      "problems": [
+        "missing: tailwindcss@^4.1.3, required by norskfranklin@0.0.1"
+      ]
+    }
+  },
+  "error": {
+    "code": "ELSPROBLEMS",
+    "summary": "missing: @astrojs/netlify@^6.2.5, required by norskfranklin@0.0.1\nmissing: @astrojs/react@^4.2.3, required by norskfranklin@0.0.1\nmissing: @coreui/coreui@^5.2.0, required by norskfranklin@0.0.1\nmissing: @coreui/react@^5.5.0, required by norskfranklin@0.0.1\nmissing: @fontsource-variable/josefin-sans@^5.2.5, required by norskfranklin@0.0.1\nmissing: @fontsource-variable/playfair-display@^5.2.5, required by norskfranklin@0.0.1\nmissing: @fontsource/poppins@^5.2.5, required by norskfranklin@0.0.1\nmissing: @heroui/react@^2.7.5, required by norskfranklin@0.0.1\nmissing: @rsuite/icons@^1.3.0, required by norskfranklin@0.0.1\nmissing: @tailwindcss/vite@^4.0.14, required by norskfranklin@0.0.1\nmissing: @types/react-dom@^19.0.4, required by norskfranklin@0.0.1\nmissing: @types/react@^19.0.11, required by norskfranklin@0.0.1\nmissing: antd@^5.24.5, required by norskfranklin@0.0.1\nmissing: astro-imagetools@^0.2.7, required by norskfranklin@0.0.1\nmissing: astro@^5.6.1, required by norskfranklin@0.0.1\nmissing: file-type@^18.4.0, required by norskfranklin@0.0.1\nmissing: framer-motion@^12.6.0, required by norskfranklin@0.0.1\nmissing: react-dom@^19.0.0, required by norskfranklin@0.0.1\nmissing: react-image-gallery@^1.4.0, required by norskfranklin@0.0.1\nmissing: react@^19.0.0, required by norskfranklin@0.0.1\nmissing: rsuite@^5.83.3, required by norskfranklin@0.0.1\nmissing: sharp@^0.33.3, required by norskfranklin@0.0.1\nmissing: tailwindcss@^4.1.3, required by norskfranklin@0.0.1",
+    "detail": ""
+  }
+}

@@ -1,25 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import franklins from "../data/franklins.json";
+import PhotoCarousel from "../components/PhotoCarousel.jsx";
+import images from "../data/images.json";
 
 const pageTitle = "Biler i norge";
 ---
 
 <Layout pageTitle={pageTitle}>
-  <div class="container shadow-effect mx-auto p-3 pt-6 sm:p-6 md:p-12 mb-10">
-    <h1 class="tracking-tight">Biler i Norge</h1>
-    <p>
-      Her er en oversikt over kjente Franklin-biler i Norge. Hvis du vet om en norskeid Franklin vi ikke har registrert her, ta <a href="/kontakt">kontakt</a>!</p>
-    <ul class="pt-4">
-      {
-        franklins.map((franklin) => (
-          <li class="text-lg">
-            <a href={`/cars/${franklin.id}`} class="card-link">
-              {franklin.year} {franklin.name}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+  <div>
+    <section class="container shadow-effect mx-auto p-3 pt-6 sm:p-6 md:p-12 mb-10">
+      <h1 class="tracking-tight">Biler i Norge</h1>
+      <p>
+        Her er en oversikt over kjente Franklin-biler i Norge. Hvis du vet om en
+        norskeid Franklin vi ikke har registrert her, ta <a href="/kontakt"
+          >kontakt</a
+        >!
+      </p>
+      <ul class="pt-4">
+        {
+          franklins.map((franklin) => (
+            <li class="text-lg">
+              <a href={`/cars/${franklin.id}`} class="card-link">
+                {franklin.year} {franklin.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <section class="container mx-auto">
+      <h2 class="text-center pt-12 pb-6">Historiske biler</h2>
+      <p class="px-12 paragraph">Karusellen viser bilder av historisk verdi for Franklin-registeret: unike glimt av Franklin-biler fra tiden de var i bruk, sjeldne motormodeller og verksteder knyttet til merket. Her får man se originalfotografier av biler som ikke lenger finnes, samt steder og miljøer med tilknytning til Franklin-historien – til inspirasjon og glede for alle Franklin-entusiaster.</p>
+      <PhotoCarousel client:load images={images} />
+    </section>
   </div>
 </Layout>
