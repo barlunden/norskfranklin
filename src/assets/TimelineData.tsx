@@ -17,7 +17,7 @@ export const timelineData = [
     {
         key: "4",
         year: "1902",
-        information: "Den første Franklin-bilen selges. Den har en 4-sylindret toppventilmotor montert på tvers foran",
+        information: "Den første Franklin-bilen selges. Den har en 4-sylindret toppventilmotor montert på tvers foran.",
     },
     {
         key: "5",
