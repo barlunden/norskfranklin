@@ -5,21 +5,20 @@ import image from "/src/images/Franklin1929II.jpg";
 const optimizedImage = await getImage({ src: image });
 ---
 
-<footer class="bg-slate-50">
-  <section class="w-full">
-    <div class="w-full my-10 pt-4 md:pt-12 text-center text-slate-900">
+
+<footer class="bg-slate-50 w-full py-8">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 px-4">
+    <div class="text-center force-text-sm md:text-left text-slate-900">
       <p class="font-bold">Kontakt:</p>
       <p>Åge Jan Barlund</p>
       <p>Tlf: 411 86 371</p>
       <p>
-        e-post: <a href="mailto:barlund@gmail.com"
-          >barlund@gmail.com</a
-        >
+        e-post: <a href="mailto:barlund@gmail.com" class="underline">barlund@gmail.com</a>
       </p>
     </div>
-  </section>
-  <div class="w-full text-center pb-4 font-bold align-bottom text-slate-900">
-    <h4>Copyright © 2025 Norsk Franklinregister</h4>
-      <p class="developer">Nettsider utviklet av <a href="https://cominoweb.no">Comino Web AS</a></p>
+    <div class="text-center md:text-right text-slate-900">
+      <h5 class="font-bold">Copyright © 2025 Norsk Franklinregister</h5>
+      <p class="developer">Nettsider utviklet av <a href="https://cominoweb.no" class="underline">Comino Web AS</a></p>
+    </div>
   </div>
 </footer>
