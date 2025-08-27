@@ -1,3 +1,12 @@
+/* Fjern grid-gap på bil-listen på mobil */
+.car-list-grid {
+  gap: 0 !important;
+}
+@media (min-width: 768px) {
+  .car-list-grid {
+    gap: 0.5rem !important;
+  }
+}
 @import "tailwindcss";
 
 /* josefin-sans-latin-wght-normal */

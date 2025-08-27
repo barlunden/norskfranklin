@@ -17,17 +17,25 @@ const pageTitle = "Biler i norge";
           >kontakt</a
         >!
       </p>
-      <ul class="pt-4">
-        {
-          franklins.map((franklin) => (
-            <li class="text-lg">
-              <a href={`/cars/${franklin.id}`} class="card-link">
-                {franklin.year} {franklin.name}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+  <div class="pt-4 md:grid md:grid-cols-2 car-list-grid">
+        {(() => {
+          const sorted = [...franklins].sort((a, b) => a.year - b.year);
+          const mid = Math.ceil(sorted.length / 2);
+          const left = sorted.slice(0, mid);
+          const right = sorted.slice(mid);
+          return [left, right].map((colArr) => (
+            <ul class="flex flex-col md:gap-0.5">
+              {colArr.map((franklin) => (
+                <li class="text-lg">
+                  <a href={`/cars/${franklin.id}`} class="card-link">
+                    {franklin.year} {franklin.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ));
+        })()}
+      </div>
     </section>
     <section class="container mx-auto pb-16">
       <h2 class="text-center pt-12 pb-6">Historiske biler</h2>
