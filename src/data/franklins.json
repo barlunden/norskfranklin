@@ -224,6 +224,13 @@
     "weight": 1500,
     "characteristics": ["Dietrich body built by Walker"],
     "owner": "Knut Erik Bjerkeseth",
-  "images": []
+  "images": [
+    { "url": "/images/KEB/153SedanVII.jpg", "photographer": "Knut Erik Bjerkeseth" },
+    { "url": "/images/KEB/153SedanVIII.jpg", "photographer": "Knut Erik Bjerkeseth" },
+    { "url": "/images/KEB/153SedanI.jpg" },
+    { "url": "/images/KEB/153SedanII.jpg", "photographer": "Knut Erik Bjerkeseth" },
+    { "url": "/images/KEB/153SedanIII.jpg", "photographer": "Knut Erik Bjerkeseth" },
+    { "url": "/images/KEB/153SedanIV.jpg", "photographer": "Knut Erik Bjerkeseth" }
+  ]
   }
 ]
