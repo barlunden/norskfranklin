@@ -150,7 +150,9 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Bjarte Ingmar Nordgård",
-  "images": []
+  "images": [
+    { "url": "/images/1928_12AB.jpg", "photographer": "" }
+  ]
   },
   {
     "id": 9,
@@ -166,7 +168,7 @@
       "gears": null
     },
     "weight": 1500,
-    "characteristics": [],
+    "characteristics": ["Restaureringsobjekt lagret for restaurering"],
     "owner": "Lasse Steeg Andersen",
   "images": []
   },
