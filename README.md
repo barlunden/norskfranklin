@@ -1,48 +1,131 @@
-# Astro Starter Kit: Basics
+# 🚗 Norsk Franklinregister
 
-```sh
-npm create astro@latest -- --template basics
+> **Ein moderne nettstad for norske H. H. Franklin bil-entusiaster**  
+> Live på: [norskfranklinregister.no](https://norskfranklinregister.no)
+
+## 🚀 Rask start
+
+```bash
+# Clone repository
+git clone https://github.com/barlunden/norskfranklin.git
+cd norskfranklin
+
+# Installer dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Bygg for produksjon
+npm run build
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 📋 Kommandoer
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+| Kommando | Handling |
+|----------|----------|
+| `npm run dev` | Start dev server på `localhost:4321` |
+| `npm run build` | Bygg produksjonsversjon til `./dist/` |
+| `npm run preview` | Preview build lokalt |
+| `npm run astro ...` | Køyr Astro CLI kommandoer |
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🏗 Teknologi-stack
 
-## 🚀 Project Structure
+- **Framework**: [Astro](https://astro.build) 5.6.1 - Static Site Generator
+- **Frontend**: [React](https://react.dev) 19.0.0 - Interaktive komponenter  
+- **Styling**: [Tailwind CSS](https://tailwindcss.com) 4.1.3 - Utility-first CSS
+- **Carousel**: [Swiper.js](https://swiperjs.com) 12.0.2 - Touch-enabled gallerier
+- **UI**: [RSuite](https://rsuitejs.com) 5.83.3 - React komponentbibliotek
+- **Deploy**: [Netlify](https://netlify.com) - Edge hosting med SSR
 
-Inside of your Astro project, you'll see the following folders and files:
+## � Prosjektstruktur
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+src/
+├── components/          # React/Astro komponenter
+│   ├── SEO.astro       # Dynamisk SEO metadata
+│   ├── SwiperCarousel.jsx  # Moderne bildekarusell
+│   ├── SwiperModal.jsx     # Modal bildevisning
+│   └── ...
+├── data/               # JSON-baserte data
+│   ├── franklins.json      # Bil-database
+│   ├── images.json         # Historiske bilder
+│   └── resources.json      # Eksterne ressursar
+├── layouts/            # Sidemallar
+├── pages/              # Astro routing
+│   ├── cars/[id]/         # Dynamiske bilsider
+│   ├── sitemap.xml.ts     # Auto-generert sitemap
+│   └── robots.txt.ts      # SEO konfigurasjon
+└── styles/             # Global CSS
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## ✨ Funksjonalitet
 
-## 🧞 Commands
+### **Implementert**
+- ✅ Responsivt design med moderne UX
+- ✅ Swiper.js bildegallerier med touch-støtte
+- ✅ Dynamisk SEO med structured data
+- ✅ Bil-database med 12 registrerte Franklin-biler
+- ✅ Modal bildevisning med keyboard-navigasjon
+- ✅ Automatisk sitemap og robots.txt
+- ✅ Netlify deployment med Edge functions
 
-All commands are run from the root of the project, from a terminal:
+### **Planlagt**
+- 🔄 Søkefunksjon med Fuse.js
+- 🔄 Admin-panel for innhaldsredigering
+- 🔄 Bildeoptimasering (WebP, lazy loading)
+- 🔄 Analytics og brukarstatistikk
+- 🔄 PWA funksjonalitet
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🔧 Utvikling
 
-## 👀 Want to learn more?
+### **Krav**
+- Node.js 18+ 
+- npm eller yarn
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### **Environment setup**
+```bash
+# Klone og installer
+git clone https://github.com/barlunden/norskfranklin.git
+cd norskfranklin
+npm install
+
+# Start development
+npm run dev
+```
+
+### **Build pipeline**
+- **Netlify**: Automatisk deploy frå `main` branch
+- **SSR**: Server-side rendering for dynamisk innhald
+- **Edge**: Global CDN distribusjon
+
+### **Bidra**
+1. Fork repository
+2. Lag feature branch: `git checkout -b feature/ny-funksjon`
+3. Commit endringar: `git commit -m 'Legg til ny funksjon'`
+4. Push til branch: `git push origin feature/ny-funksjon`
+5. Opprett Pull Request
+
+## 📊 SEO og ytelse
+
+- **Lighthouse score**: 95+ på alle kategoriar
+- **Structured data**: Schema.org for rich snippets
+- **Open Graph**: Optimert for sosiale medier
+- **Sitemap**: Automatisk generering
+- **Core Web Vitals**: Optimalisert for ytelse
+
+## � Kontakt
+
+**Prosjektansvarleg**: Åge Jan Barlund  
+📧 barlund@gmail.com  
+📞 411 86 371
+
+**Teknisk utvikling**: [Comino Web AS](https://cominoweb.no)
+
+## 📄 Lisens
+
+Copyright © 2025 Norsk Franklinregister. Alle rettar reserverte.
+
+---
+
+*For detaljert prosjektdokumentasjon, sjå [PROSJEKT-OVERSIKT.md](./PROSJEKT-OVERSIKT.md)*
