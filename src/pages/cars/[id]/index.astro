@@ -9,13 +9,52 @@ if (!franklin) {
   throw new Error(`Ingen bil funnet med ID ${id}`);
 }
 
+// Sorter bilene etter år for konsistent navigering
+const sortedCars = [...carData].sort((a, b) => a.year - b.year);
+const currentIndex = sortedCars.findIndex((c) => c.id === Number(id));
+const prevCar = currentIndex > 0 ? sortedCars[currentIndex - 1] : null;
+const nextCar = currentIndex < sortedCars.length - 1 ? sortedCars[currentIndex + 1] : null;
+
 const hasImages = franklin.images && franklin.images.length > 0;
 const hasMultipleImages = franklin.images && franklin.images.length > 1;
 const hasCharacteristicData = franklin.characteristics && franklin.characteristics.length > 0;
 ---
 <Layout>
   <div class="container shadow-effect mx-auto mb-10">
-    <div class="px-8 pt-8 pb-4">
+    <!-- Navigasjonspiler -->
+    <div class="flex justify-between items-center px-8 pt-4">
+      {prevCar ? (
+        <a 
+          href={`/cars/${prevCar.id}`} 
+          class="flex items-center gap-2 text-blue-700 hover:text-blue-900 transition-colors duration-200"
+          title={`Forrige: ${prevCar.year} ${prevCar.name}`}
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span class="hidden sm:inline">Forrige</span>
+        </a>
+      ) : (
+        <div></div>
+      )}
+      
+      {nextCar ? (
+        <a 
+          href={`/cars/${nextCar.id}`} 
+          class="flex items-center gap-2 text-blue-700 hover:text-blue-900 transition-colors duration-200"
+          title={`Neste: ${nextCar.year} ${nextCar.name}`}
+        >
+          <span class="hidden sm:inline">Neste</span>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      ) : (
+        <div></div>
+      )}
+    </div>
+    
+    <div class="px-8 pt-4 pb-4">
       <h2 class="tracking-tight">{franklin.year} {franklin.name}</h2>
       <p><strong>Eier:</strong> {franklin.owner}</p>
     </div>
