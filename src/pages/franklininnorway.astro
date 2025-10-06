@@ -4,10 +4,16 @@ import franklins from "../data/franklins.json";
 import SwiperCarousel from "../components/SwiperCarousel.jsx";
 import images from "../data/images.json";
 
-const pageTitle = "Biler i norge";
+const seoData = {
+  title: "Franklin biler i Norge – Registrerte biler og eiere | Norsk Franklinregister",
+  description: "Oversikt over kjente Franklin-biler i Norge fra 1905-1931. Se bilder, tekniske detaljer og eierinformasjon for norske H. H. Franklin automobiler.",
+  keywords: ["Franklin biler Norge", "norske Franklin eiere", "Franklin bilregister", "klassiske biler Norge", "H. H. Franklin Norge", "veteranbiler", "Franklin automobiler"],
+  image: "https://norskfranklinregister.no/images/TSB/FranklinRondane2.jpeg",
+  type: "website" as const
+};
 ---
 
-<Layout pageTitle={pageTitle}>
+<Layout {...seoData}>
   <div>
     <section class="container shadow-effect mx-auto p-3 pt-6 sm:p-6 md:p-12 mb-10">
       <h1 class="tracking-tight">Biler i Norge</h1>

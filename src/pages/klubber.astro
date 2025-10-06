@@ -11,10 +11,16 @@ const utenlandskeKlubber = resources
   .filter((resource) => resource.country.toLowerCase() !== "norge")
   .sort((a, b) => a.name.localeCompare(b.name));
 
-const pageTitle = "Andre klubber";
+const seoData = {
+  title: "Andre bilklubber og nettsider – Linker til Franklin-resurser | Norsk Franklinregister",
+  description: "Finn linker til norske og internasjonale bilklubber, Franklin-museer og ressurser. Utforsk H. H. Franklin Club, veteranvognklubber og Franklin-samfunn.",
+  keywords: ["Franklin klubber", "bilklubber Norge", "H. H. Franklin Club", "veteranvogn klubber", "Franklin museum", "Franklin ressurser", "klassiske biler"],
+  image: "https://norskfranklinregister.no/images/FranklinLogo.png",
+  type: "website" as const
+};
 ---
 
-<Layout pageTitle={pageTitle}>
+<Layout {...seoData}>
   <CustomProvider>
     <div class="container shadow-effect mx-auto p-3 pt-6 sm:p-6 md:p-12 mb-10">
       <h1 class="tracking-tight">Andre nettsider</h1>

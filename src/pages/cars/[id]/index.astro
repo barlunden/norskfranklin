@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import carData from '../../../data/franklins.json'; // Eller '../data/cars.yaml'
+import carData from '../../../data/franklins.json';
 
 const { id } = Astro.params;
 const franklin = carData.find((c) => c.id === Number(id));
@@ -8,6 +8,26 @@ const franklin = carData.find((c) => c.id === Number(id));
 if (!franklin) {
   throw new Error(`Ingen bil funnet med ID ${id}`);
 }
+
+// SEO data basert på bil-informasjon
+const seoData = {
+  title: `${franklin.year} ${franklin.name} – ${franklin.owner} | Norsk Franklinregister`,
+  description: `Detaljer om ${franklin.year} ${franklin.name} eid av ${franklin.owner}. Se bilder, tekniske spesifikasjoner og historie for denne unike H. H. Franklin bilen.`,
+  keywords: [
+    `${franklin.year} Franklin`,
+    franklin.name,
+    "Franklin bil Norge",
+    "klassiske biler",
+    "H. H. Franklin",
+    `Franklin ${franklin.year}`,
+    "veteranbiler Norge",
+    franklin.owner
+  ],
+  image: franklin.images && franklin.images[0] 
+    ? `https://norskfranklinregister.no${franklin.images[0].url}`
+    : "https://norskfranklinregister.no/images/FranklinLogo.png",
+  type: "article" as const
+};
 
 // Sorter bilene etter år for konsistent navigering
 const sortedCars = [...carData].sort((a, b) => a.year - b.year);
@@ -19,7 +39,7 @@ const hasImages = franklin.images && franklin.images.length > 0;
 const hasMultipleImages = franklin.images && franklin.images.length > 1;
 const hasCharacteristicData = franklin.characteristics && franklin.characteristics.length > 0;
 ---
-<Layout>
+<Layout {...seoData}>
   <div class="container shadow-effect mx-auto mb-10">
     <!-- Navigasjonspiler -->
     <div class="flex justify-between items-center px-8 pt-4">

@@ -4,13 +4,16 @@ import { CustomProvider } from "rsuite";
 import MainPageHero from "../components/MainPageHero.astro";
 import MainPageText from "../components/MainPageText.astro";
 
-const pageTitle = "Norsk Franklinklubb";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const seoData = {
+  title: "Norsk Franklinregister – Historie og informasjon om H. H. Franklin-biler",
+  description: "Norsk Franklinregister er et samlingssted for entusiaster av H. H. Franklin biler i Norge. Finn informasjon, historikk, bilmodeller og kontaktmuligheter.",
+  keywords: ["Franklin biler", "H. H. Franklin", "Norsk Franklinregister", "klassiske biler", "bilhistorie", "luftkjølte motorer", "bilklubber Norge", "veteranbiler"],
+  image: "https://norskfranklinregister.no/images/FranklinLogo.png",
+  type: "website" as const
+};
 ---
 
-<Layout pageTitle={pageTitle}>
+<Layout {...seoData}>
   <CustomProvider>
     <section class="outer-container">
       <MainPageHero />

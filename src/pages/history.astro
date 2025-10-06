@@ -3,10 +3,16 @@ import FranklinTimeline from "../components/Timeline";
 import Layout from "../layouts/Layout.astro";
 import { CustomProvider } from "rsuite";
 
-const pageTitle = "Franklins historie";
+const seoData = {
+  title: "Franklin bilhistorie – Fra 1902 til 1934 | Norsk Franklinregister",
+  description: "Utforsk den fascinerende historien til H. H. Franklin Manufacturing Company (1902-1934). Luftkjølte motorer, innovative teknologier og bilpionerer i Syracuse, New York.",
+  keywords: ["Franklin bilhistorie", "H. H. Franklin Manufacturing", "luftkjølte motorer", "bilhistorie", "Syracuse New York", "Franklin timeline", "klassiske amerikanske biler"],
+  image: "https://norskfranklinregister.no/images/Franklin1929I.jpg",
+  type: "article" as const
+};
 ---
 
-<Layout pageTitle={pageTitle}>
+<Layout {...seoData}>
   <CustomProvider>
     <div class="container shadow-effect mx-auto p-3 pt-6 sm:p-6 md:p-12 mb-10"> 
       <h1 class="tracking-tight">Franklins historikk</h1>

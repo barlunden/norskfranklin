@@ -9,9 +9,29 @@ const franklin = carData.find((c) => c.id === Number(id));
 if (!franklin) {
   throw new Error(`Ingen bil funnet med ID ${id}`);
 }
+
 const images = franklin.images || [];
+
+// SEO data for album-siden
+const seoData = {
+  title: `Fotoalbum: ${franklin.year} ${franklin.name} | Norsk Franklinregister`,
+  description: `Se bilder av ${franklin.year} ${franklin.name} eid av ${franklin.owner}. Utforsk bildegalleriet med historiske og moderne fotografier av denne H. H. Franklin bilen.`,
+  keywords: [
+    `${franklin.year} Franklin bilder`,
+    `${franklin.name} album`,
+    "Franklin bil bilder",
+    "klassiske bil fotografier",
+    "H. H. Franklin galleri",
+    franklin.owner,
+    "veteranbil bilder Norge"
+  ],
+  image: franklin.images && franklin.images[0] 
+    ? `https://norskfranklinregister.no${franklin.images[0].url}`
+    : "https://norskfranklinregister.no/images/FranklinLogo.png",
+  type: "article" as const
+};
 ---
-<Layout>
+<Layout {...seoData}>
   <div class="container mx-auto mb-10 px-4">
     <h2 class="font-bold mb-6 text-center">Fotoalbum: {franklin.year} {franklin.name}</h2>
     <SwiperModal images={images} client:load />

@@ -2,10 +2,16 @@
 import { CustomProvider } from "rsuite";
 import Layout from "../layouts/Layout.astro";
 
-// Ingen spesiell backend-logikk nødvendig for denne enkle statiske siden
+const seoData = {
+  title: "Takk for innsending – Norsk Franklinregister",
+  description: "Takk for ditt bidrag til Norsk Franklinregister. Vi setter stor pris på at du deler bilder og kunnskap om Franklin-biler med oss.",
+  keywords: ["takk", "Franklin bidrag", "bildeinnllevering", "Franklin kunnskap"],
+  image: "https://norskfranklinregister.no/images/FranklinLogo.png",
+  type: "website" as const
+};
 ---
 
-<Layout>
+<Layout {...seoData}>
   <CustomProvider>
         <main class="container bg-white p-8 rounded-lg shadow-effect text-center">
           <h1 class="text-3xl font-bold mb-4 text-gray-800">

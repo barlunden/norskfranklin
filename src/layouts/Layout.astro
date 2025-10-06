@@ -3,60 +3,40 @@ import "../styles/global.css";
 import "rsuite/dist/rsuite.min.css";
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
-const { pageTitle } = Astro.props;
+import SEO from "../components/SEO.astro";
 import "@fontsource-variable/josefin-sans";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  type?: 'website' | 'article';
+}
+
+const { 
+  title, 
+  description, 
+  keywords, 
+  image, 
+  type 
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="no">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>
-      Norsk Franklinregister – Historie og informasjon om H. H. Franklin-biler
-    </title>
-    <meta
-      name="description"
-      content="Norsk Franklinregister er et samlingssted for entusiaster av H. H. Franklin biler i Norge. Finn informasjon, historikk, bilmodeller og kontaktmuligheter."
-    />
-    <meta
-      name="keywords"
-      content="Franklin biler, H. H. Franklin, Norsk Franklinregister, klassiske biler, bilhistorie, luftkjølte motorer, bilklubber Norge"
-    />
-    <meta name="author" content="Norsk Franklinregister" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph for deling på sosiale medier -->
-    <meta
-      property="og:title"
-      content="Norsk Franklinregister – Historie og informasjon om H. H. Franklin-biler"
-    />
-    <meta
-      property="og:description"
-      content="Et samlingssted for norske Franklin-entusiaster med informasjon om bilmodeller, historikk og klubber."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.norskfranklinregister.no/" />
-    <meta
-      property="og:image"
-      content="https://www.norskfranklinregister.no/images/FranklinLogo.png"
-    />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Norsk Franklinregister – Historie og informasjon om H. H. Franklin-biler"
-    />
-    <meta
-      name="twitter:description"
-      content="Et samlingssted for norske Franklin-entusiaster med informasjon om bilmodeller, historikk og klubber."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.norskfranklinregister.no/images/FranklinLogo.png"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    
+    <SEO 
+      title={title}
+      description={description}
+      keywords={keywords}
+      image={image}
+      type={type}
+    />
   </head>
   <body>
     <div class="layout-container antialiased">

@@ -1,0 +1,106 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article';
+  siteName?: string;
+}
+
+const {
+  title = "Norsk Franklinregister – Historie og informasjon om H. H. Franklin-biler",
+  description = "Norsk Franklinregister er et samlingssted for entusiaster av H. H. Franklin biler i Norge. Finn informasjon, historikk, bilmodeller og kontaktmuligheter.",
+  keywords = ["Franklin biler", "H. H. Franklin", "Norsk Franklinregister", "klassiske biler", "bilhistorie", "luftkjølte motorer", "bilklubber Norge"],
+  image = "https://norskfranklinregister.no/images/FranklinLogo.png",
+  url = Astro.url.href,
+  type = "website",
+  siteName = "Norsk Franklinregister"
+} = Astro.props;
+
+// Sørg for at description ikkje er for lang (maks 160 karakterer for optimal SEO)
+const truncatedDescription = description.length > 160 
+  ? description.substring(0, 157) + "..." 
+  : description;
+
+// Lag structured data for bilsider
+const isCarPage = url.includes('/cars/');
+const carId = isCarPage ? url.match(/\/cars\/(\d+)/)?.[1] : null;
+
+let structuredData = {};
+if (isCarPage && carId) {
+  // Last bil-data for structured data
+  const carData = await import("../data/franklins.json");
+  const car = carData.default.find((c: any) => c.id === Number(carId));
+  
+  if (car) {
+    structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": `${car.year} ${car.name}`,
+      "description": `${car.year} ${car.name} - Franklin bil eid av ${car.owner}`,
+      "brand": {
+        "@type": "Brand",
+        "name": "H. H. Franklin"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "H. H. Franklin Manufacturing Company"
+      },
+      "productionDate": car.year.toString(),
+      "image": car.images && car.images[0] ? `https://norskfranklinregister.no${car.images[0].url}` : image
+    };
+  }
+} else {
+  // Standard website structured data
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": siteName,
+    "description": description,
+    "url": "https://norskfranklinregister.no",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://norskfranklinregister.no/franklininnorway?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+}
+---
+
+<!-- Canonical URL -->
+<link rel="canonical" href={url} />
+
+<!-- Basic Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={truncatedDescription} />
+<meta name="keywords" content={keywords.join(", ")} />
+<meta name="author" content="Norsk Franklinregister" />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={truncatedDescription} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={url} />
+<meta property="og:image" content={image} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content="nb_NO" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={truncatedDescription} />
+<meta name="twitter:image" content={image} />
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+<!-- Favicon og app icons -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="theme-color" content="#2563eb" />
+
+<!-- Preconnect til viktige domener -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

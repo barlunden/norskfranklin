@@ -1,9 +1,17 @@
 ---
 import { CustomProvider } from "rsuite";
 import Layout from "../layouts/Layout.astro";
+
+const seoData = {
+  title: "Kontakt oss – Del kunnskap og bilder | Norsk Franklinregister",
+  description: "Ta kontakt med Norsk Franklinregister. Send inn bilder av din Franklin, still spørsmål eller del erfaringer med andre Franklin-entusiaster.",
+  keywords: ["kontakt Franklin", "Franklin bilder", "del Franklin kunnskap", "Franklin spørsmål", "bilentusiaster", "veteranbil kontakt"],
+  image: "https://norskfranklinregister.no/images/FranklinLogo.png",
+  type: "website" as const
+};
 ---
 
-<Layout>
+<Layout {...seoData}>
   <CustomProvider>
     <form
       action="https://formspree.io/f/xpwdggnn"
