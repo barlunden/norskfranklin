@@ -16,9 +16,9 @@
     "characteristics": [],
     "owner": "Bjørn Skjærvik",
     "images": [
-      { "url": "/images/1905Franklin.jpg", "photographer": "Knut Erik Bjerkeseth" },
-      { "url": "/images/1905Franklin3.jpg", "photographer": "Knut Erik Bjerkeseth" },
-      { "url": "/images/1905Franklin2.jpg", "photographer": "Knut Erik Bjerkeseth" }
+      { "url": "/images/BS/1905Franklin.jpg", "photographer": "Knut Erik Bjerkeseth" },
+      { "url": "/images/BS/1905Franklin3.jpg", "photographer": "Knut Erik Bjerkeseth" },
+      { "url": "/images/BS/1905Franklin2.jpg", "photographer": "Knut Erik Bjerkeseth" }
     ]
   },
   {
@@ -37,7 +37,9 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Bjørn Skjærvik",
-  "images": []
+  "images": [
+    { "url": "/images/BS/1919Franklin.bmp" }
+  ]
   },
   {
     "id": 3,
@@ -55,7 +57,7 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Egil Hagen",
-  "images": []
+  "images": [ { "url": "/images/EH/1955EH.jpg" } ]
   },
   {
     "id": 4,
@@ -74,10 +76,10 @@
     "characteristics": [],
     "owner": "Trude Stray Bjerkeseth",
     "images": [
-      { "url": "/images/Grensepassering.jpg", "photographer": "Stian Bruun" },
-      { "url": "/images/TSB9B.jpg", "photographer": "Knut Erik Bjerkeseth" },
-      { "url": "/images/TSB9B-2.jpg" },
-      { "url": "/images/FranklinRondane2.jpeg", "photographer": "Åge Jan Barlund"}
+      { "url": "/images/TSB/Grensepassering.jpg", "photographer": "Stian Bruun" },
+      { "url": "/images/TSB/TSB9B.jpg", "photographer": "Knut Erik Bjerkeseth" },
+      { "url": "/images/TSB/TSB9B-2.jpg" },
+      { "url": "/images/TSB/FranklinRondane2.jpeg", "photographer": "Åge Jan Barlund"}
     ]
   },
   {
@@ -96,7 +98,12 @@
     "weight": 1500,
     "characteristics": [],
     "owner": "Eivind Daldorff",
-  "images": []
+  "images": [
+     { "url": "/images/ED/ED01.jpg" },
+     { "url": "/images/ED/ED02.jpg" },
+     { "url": "/images/ED/ED03.jpg" },
+     { "url": "/images/ED/ED04.jpg" }
+  ]
   },
   {
     "id": 6,
@@ -130,9 +137,13 @@
       "gears": null
     },
     "weight": 1500,
-    "characteristics": [],
+    "characteristics": ["Trillbar delebil, kappet ramme, motor, gearkasse, bakstilling, torpedo, noen instrumenter"],
     "owner": "Lasse Steeg Andersen",
-  "images": []
+  "images": [
+     { "url": "/images/LSA/LSA03.jpg" },
+     { "url": "/images/LSA/LSA01.jpg" },
+     { "url": "/images/LSA/LSA02.jpg" }
+  ]
   },
   {
     "id": 8,
@@ -151,7 +162,7 @@
     "characteristics": ["Restaureringsobjekt - lagret for restaurering"],
     "owner": "Bjarte Ingmar Nordgård",
   "images": [
-    { "url": "/images/1928_12AB.jpg", "photographer": "" }
+    { "url": "/images/BjIN/1928_12AB.jpg", "photographer": "" }
   ]
   },
   {
@@ -168,9 +179,13 @@
       "gears": null
     },
     "weight": 1500,
-    "characteristics": [],
+    "characteristics": ["Kjørbar. Nær ferdig for registrering"],
     "owner": "Lasse Steeg Andersen",
-  "images": []
+  "images": [
+    { "url": "/images/LSA/LSA06.jpg" },
+     { "url": "/images/LSA/LSA05.jpg" },
+     { "url": "/images/LSA/LSA04.jpg" }
+  ]
   },
   {
     "id": 10,
@@ -189,7 +204,11 @@
     "characteristics": [],
     "owner": "Sverre Haugesten",
     "images": [
-      { "url": "/images/Franklin1929I.jpg" }
+      { "url": "/images/SH/Franklin1929I.jpg" },
+      { "url": "/images/SH/Franklin1929II.jpg" },
+      { "url": "/images/SH/SH02.jpg" },
+      { "url": "/images/SH/SH01.jpeg" },
+      { "url": "/images/SH/SH03.jpeg" }
     ]
   },
   {
@@ -206,9 +225,12 @@
       "gears": null
     },
     "weight": 1500,
-    "characteristics": ["Converted to Roadster"],
+    "characteristics": ["Konvertert til Roadster"],
     "owner": "Harald Olsen",
-  "images": []
+  "images": [
+    { "url": "/images/HO/HO01.jpg" },
+    { "url": "/images/HO/HO02.jpg" }
+  ]
   },
   {
     "id": 12,
@@ -227,11 +249,11 @@
     "characteristics": ["Dietrich body built by Walker"],
     "owner": "Knut Erik Bjerkeseth",
   "images": [
+    { "url": "/images/KEB/153SedanII.jpg", "photographer": "Knut Erik Bjerkeseth" },
+    { "url": "/images/KEB/153SedanIII.jpg", "photographer": "Knut Erik Bjerkeseth" },
     { "url": "/images/KEB/153SedanVII.jpg", "photographer": "Knut Erik Bjerkeseth" },
     { "url": "/images/KEB/153SedanVIII.jpg", "photographer": "Knut Erik Bjerkeseth" },
     { "url": "/images/KEB/153SedanI.jpg" },
-    { "url": "/images/KEB/153SedanII.jpg", "photographer": "Knut Erik Bjerkeseth" },
-    { "url": "/images/KEB/153SedanIII.jpg", "photographer": "Knut Erik Bjerkeseth" },
     { "url": "/images/KEB/153SedanIV.jpg", "photographer": "Knut Erik Bjerkeseth" }
   ]
   }
