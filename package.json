@@ -35,7 +35,7 @@
   },
   "overrides": {
   "@netlify/blobs": "10.0.8",
-  "@netlify/dev-utils": "4.1.1",
+  "@netlify/dev-utils": "4.2.0",
   "@netlify/headers": "2.0.9",
   "@netlify/images": "1.2.5",
   "@netlify/redirects": "3.0.10",

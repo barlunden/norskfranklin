@@ -15,6 +15,10 @@ const hasCharacteristicData = franklin.characteristics && franklin.characteristi
 ---
 <Layout>
   <div class="container shadow-effect mx-auto mb-10">
+    <div class="px-8 pt-8 pb-4">
+      <h2 class="tracking-tight">{franklin.year} {franklin.name}</h2>
+      <p><strong>Eier:</strong> {franklin.owner}</p>
+    </div>
     {hasImages && franklin.images[0] ? (
       <figure class="relative bg-white rounded shadow p-4 flex flex-col items-center w-full mb-4">
         <img
@@ -30,9 +34,7 @@ const hasCharacteristicData = franklin.characteristics && franklin.characteristi
       </figure>
     ) : null}
     <div class="px-8 pt-4 pb-8">
-
-      <h2 class="tracking-tight">{franklin.year} {franklin.name}</h2>
-      <p><strong>Eier:</strong> {franklin.owner}</p>
+      <h3>Tekniske detaljer</h3>
       <div class="grid grid-cols-2 gap-4">
         <div>
   
