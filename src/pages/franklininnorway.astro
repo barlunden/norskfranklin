@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import franklins from "../data/franklins.json";
-import GalleryCarousel from "../components/GalleryCarousel.jsx";
+import SwiperCarousel from "../components/SwiperCarousel.jsx";
 import images from "../data/images.json";
 
 const pageTitle = "Biler i norge";
@@ -40,7 +40,7 @@ const pageTitle = "Biler i norge";
     <section class="container mx-auto pb-16">
       <h2 class="text-center pt-12 pb-6">Historiske biler</h2>
       <p class="px-12 paragraph">Galleriet viser bilder av historisk verdi for Franklin-registeret: unike glimt av Franklin-biler fra tiden de var i bruk, sjeldne motormodeller og verksteder knyttet til merket. Her får man se originalfotografier av biler som ikke lenger finnes, samt steder og miljøer med tilknytning til Franklin-historien – til inspirasjon og glede for alle Franklin-entusiaster.</p>
-  <GalleryCarousel client:load images={images} />
+  <SwiperCarousel client:load images={images} />
     </section>
   </div>
 </Layout>
