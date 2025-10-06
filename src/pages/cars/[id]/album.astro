@@ -1,7 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import carData from '../../../data/franklins.json';
-import GalleryCarousel from '../../../components/GalleryCarousel.jsx';
+import SwiperModal from '../../../components/SwiperModal.jsx';
 
 const { id } = Astro.params;
 const franklin = carData.find((c) => c.id === Number(id));
@@ -13,22 +13,12 @@ const images = franklin.images || [];
 ---
 <Layout>
   <div class="container mx-auto mb-10 px-4">
-  <h2 class="font-bold mb-6 text-center">Fotoalbum: {franklin.year} {franklin.name}</h2>
-  <GalleryCarousel images={images} client:load />
+    <h2 class="font-bold mb-6 text-center">Fotoalbum: {franklin.year} {franklin.name}</h2>
+    <SwiperModal images={images} client:load />
 
-  <div id="modal" class="fixed inset-0 bg-black bg-opacity-70 items-center justify-center z-50 hidden">
-  <div class="relative bg-white rounded shadow-lg p-4 max-w-2xl w-full flex flex-col items-center">
-  <button id="close-modal" class="absolute top-2 right-2 text-gray-700 hover:text-red-600 text-2xl font-bold">×</button>
-  <img id="modal-img" src="" alt="Stort bilde" class="w-full h-auto object-contain rounded mb-2" />
-  <div id="modal-caption" class="text-xs text-gray-700 mt-2 w-full text-center"></div>
-      </div>
-    </div>
     <div class="mt-8 text-center">
       <a href={`/cars/${id}`} class="text-blue-700 pt-4 underline">Tilbake til bilfakta</a>
     </div>
   </div>
 </Layout>
 
-<style>
-  /* Ekstra styling kan legges her ved behov */
-</style>
