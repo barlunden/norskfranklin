@@ -1,9 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
     <style>
-        path { fill: #000; }
-        @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
-        }
+      .car-body { fill: #2563eb; }
+      .car-detail { fill: #1e40af; }
+      .wheel { fill: #374151; }
+      .highlight { fill: #60a5fa; }
+      .text { fill: #1e40af; font-family: serif; font-weight: bold; }
+      
+      @media (prefers-color-scheme: dark) {
+        .car-body { fill: #60a5fa; }
+        .car-detail { fill: #3b82f6; }
+        .wheel { fill: #9ca3af; }
+        .highlight { fill: #93c5fd; }
+        .text { fill: #60a5fa; }
+      }
     </style>
+  </defs>
+  
+  <!-- Stilisert Franklin bil silhuett -->
+  <!-- Hovuddel av bilen -->
+  <path class="car-body" d="M20 75 L25 65 L35 60 L45 58 L85 58 L95 60 L105 65 L108 75 L108 85 L105 90 L20 90 Z"/>
+  
+  <!-- Vindauge og tak -->
+  <path class="car-detail" d="M30 65 L35 58 L75 58 L80 65 L75 70 L35 70 Z"/>
+  
+  <!-- Frontrute -->
+  <path class="highlight" d="M30 65 L35 60 L45 60 L40 67 Z"/>
+  
+  <!-- Bakrute -->
+  <path class="highlight" d="M85 60 L95 60 L90 67 L85 67 Z"/>
+  
+  <!-- Hjul -->
+  <circle class="wheel" cx="35" cy="85" r="8"/>
+  <circle class="wheel" cx="85" cy="85" r="8"/>
+  
+  <!-- Hjul detaljer -->
+  <circle class="highlight" cx="35" cy="85" r="4"/>
+  <circle class="highlight" cx="85" cy="85" r="4"/>
+  
+  <!-- Franklin "F" over bilen -->
+  <text class="text" x="64" y="45" text-anchor="middle" font-size="28">F</text>
+  
+  <!-- Dekorativ linje under -->
+  <path class="car-detail" d="M20 100 L108 100" stroke-width="2" stroke="#2563eb" fill="none"/>
 </svg>

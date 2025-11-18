@@ -1,0 +1,19 @@
+<!-- 
+Apple Touch Icon Placeholder
+---
+Dette er ein placeholder som beskriver korleis du kan lage apple-touch-icon.png:
+
+1. Gå til https://favicon.io/favicon-converter/
+2. Last opp favicon.svg
+3. Last ned 180x180 PNG versjon
+4. Rename til apple-touch-icon.png
+5. Legg i /public/ mappa
+
+Alternativt kan du bruke CLI-verktøy som:
+npm install -g favicon-generator-cli
+favicon-generator favicon.svg
+
+Eller bruke online verktøy som:
+- https://realfavicongenerator.net/
+- https://www.favicon-generator.org/
+-->

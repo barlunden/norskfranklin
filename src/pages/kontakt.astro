@@ -14,11 +14,22 @@ const seoData = {
 <Layout {...seoData}>
   <CustomProvider>
     <form
-      action="https://formspree.io/f/xpwdggnn"
+      name="kontakt"
       method="POST"
-      enctype="multipart/form-data"
+      action="/takk"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
       class="container mx-auto shadow-effect space-y-5"
     >
+      <input type="hidden" name="form-name" value="kontakt" />
+      
+      <!-- Honeypot for spam protection -->
+      <p class="hidden">
+        <label>
+          Don't fill this out if you're human: <input name="bot-field" />
+        </label>
+      </p>
+
       <h2 class="text-2xl font-bold mb-4 text-gray-800">
         Dele kunnskap eller stille spørsmål?
       </h2>

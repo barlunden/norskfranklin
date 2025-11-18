@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .bg { fill: #2563eb; }
+      .text { fill: #ffffff; font-family: serif; font-weight: bold; }
+      
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #1e40af; }
+        .text { fill: #ffffff; }
+      }
+    </style>
+  </defs>
+  
+  <!-- Enkel sirkel bakgrunn -->
+  <circle class="bg" cx="64" cy="64" r="56"/>
+  
+  <!-- Franklin "F" -->
+  <text class="text" x="64" y="84" text-anchor="middle" font-size="64">F</text>
+</svg>
