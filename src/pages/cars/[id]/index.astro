@@ -2,6 +2,12 @@
 import Layout from '../../../layouts/Layout.astro';
 import carData from '../../../data/franklins.json';
 
+export async function getStaticPaths() {
+  return carData.map((car) => ({
+    params: { id: car.id.toString() },
+  }));
+}
+
 const { id } = Astro.params;
 const franklin = carData.find((c) => c.id === Number(id));
 
