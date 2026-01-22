@@ -3,24 +3,41 @@ import { getImage } from "astro:assets";
 import image from "/src/images/Franklin1929II.jpg";
 
 const optimizedImage = await getImage({ src: image });
-
 const currentYear = new Date().getFullYear();
 ---
 
+<footer class="bg-slate-50 w-full border-t border-slate-200">
+  <div class="max-w-5xl mx-auto py-10 px-6">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      
+      <div class="text-slate-900 space-y-1">
+        <h4 class="font-bold text-lg mb-2">Norsk Franklinregister</h4>
+        <p class="text-sm font-medium">Åge Jan Barlund</p>
+        <p class="text-sm">Tlf: 411 86 371</p>
+        <p class="text-sm">
+          E-post: <a href="mailto:barlund@gmail.com" class="hover:text-blue-700 underline transition-colors">barlund@gmail.com</a>
+        </p>
+      </div>
 
-<footer class="bg-slate-50 w-full py-8">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 px-4">
-    <div class="text-center force-text-sm md:text-left text-slate-900">
-      <p class="font-bold">Kontakt:</p>
-      <p>Åge Jan Barlund</p>
-      <p>Tlf: 411 86 371</p>
-      <p>
-        e-post: <a href="mailto:barlund@gmail.com" class="underline">barlund@gmail.com</a>
-      </p>
-    </div>
-    <div class="text-center md:text-right text-slate-900">
-      <h5 class="font-bold">Copyright © {currentYear} Norsk Franklinregister</h5>
-      <p class="developer">Nettsider utviklet av <a href="https://cominoweb.no" class="underline">Comino Web AS</a></p>
+      <div class="flex flex-col md:items-end text-slate-700 text-xs gap-3">
+        <div class="space-y-1 md:text-right">
+          <p class="font-bold text-slate-900 text-sm">
+            Copyright © {currentYear} Norsk Franklinregister
+          </p>
+          <p class="opacity-80">
+            Nettsider utviklet av <a href="https://cominoweb.no" class="hover:underline font-semibold">Comino Web AS</a>
+          </p>
+        </div>
+
+        <div class="md:text-right pt-2 border-t border-slate-200 md:border-0">
+          <p class="italic opacity-60">
+            Forsidefoto: <span class="font-medium">Franklin 9B Touring (1919)</span>
+            <br class="hidden md:block" />
+            Fotografert av: <span class="font-medium">Åge Jan Barlund</span>
+          </p>
+        </div>
+      </div>
+      
     </div>
   </div>
 </footer>
